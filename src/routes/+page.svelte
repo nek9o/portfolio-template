@@ -99,7 +99,7 @@
       class="pb-16 text-center"
     >
       <div class="text-[9px] uppercase tracking-[0.2em] text-zinc-400 mb-2">
-        &copy; {new Date().getFullYear()} {profile.nameEn}
+        &copy; {new Date().getFullYear()} {profile.nameEn}{seo.showAllRightsReserved ? '. All rights reserved' : ''}
       </div>
 
       <div class="text-[9px] text-zinc-400">

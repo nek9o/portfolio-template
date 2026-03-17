@@ -39,6 +39,7 @@
     themeColor: "#fbfbfb",             // ブラウザのテーマカラー
     siteUrl: "https://your-site.pages.dev/", // デプロイ先のURL
     ogpImage: "https://your-site.pages.dev/avatar.png", // SNSシェア時の画像URL
+    showAllRightsReserved: true,       // フッターに "All rights reserved" を表示するか
   },
 ```
 
