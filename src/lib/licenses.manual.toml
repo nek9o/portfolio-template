@@ -1,0 +1,295 @@
+# manual licenses for third-party libraries
+[[licenses]]
+name = "Lexend"
+version = ""
+licenseId = "OFL-1.1"
+repository = "https://github.com/googlefonts/lexend"
+publisher = "Google Fonts / Thomas Jockin"
+email = ""
+url = "https://fonts.google.com/specimen/Lexend"
+licenseText = """Copyright 2018 The Lexend Project Authors (https://github.com/googlefonts/lexend), with Reserved Font Name "RevReading Lexend".
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any individual, company, or other entity that created
+the Original Version.
+
+CONDITIONS & RESTRICTIONS
+1. Neither the Font Software nor any of its individual components,
+   may be sold in isolation.
+
+2. The Font Software may be bundled with other software that is
+   sold, provided that the buyer is not told they are buying only the
+   Font Software.
+
+3. The Font Software may be included in a package that contains other
+   software, provided that the Font Software does not advertise itself
+   as a complete product and that the other software does not advertise
+   itself as being enhanced with the Font Software.
+
+4. The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+   Software shall not be used to promote, endorse or advertise any
+   Modified Version, except to acknowledge the contribution(s) of the
+   Copyright Holder(s) and the Author(s) and with their explicit written
+   permission.
+
+5. The Font Software may be modified, altered, or added to, and may be
+   redistributed under the terms of this license, provided that:
+   a) the copyright notices are not removed or altered in any way.
+   b) the Modified Version is not distributed as part of a larger
+      product which contains the Font Software as a subset.
+   c) the Modified Version is clearly identified as such and is not
+      represented as the original software.
+   d) the name(s) of the Copyright Holder(s) and the Author(s) of the
+      Font Software shall not be used to promote, endorse or advertise
+      the Modified Version without the written permission of the
+      Copyright Holder(s) and/or the Author(s).
+   e) the Modified Version may be licensed under the same terms as this
+      license, or under different terms, provided that the terms of this
+      license are met.
+
+6. The Font Software may be converted to other formats, provided that:
+   a) the copyright notices are not removed or altered in any way.
+   b) the Converted Version is not distributed as part of a larger
+      product which contains the Font Software as a subset.
+   c) the Converted Version is clearly identified as such and is not
+      represented as the original software.
+   d) the name(s) of the Copyright Holder(s) and the Author(s) of the
+      Font Software shall not be used to promote, endorse or advertise
+      the Converted Version without the written permission of the
+      Copyright Holder(s) and/or the Author(s).
+   e) the Converted Version may be licensed under the same terms as this
+      license, or under different terms, provided that the terms of this
+      license are met.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE FONT
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE FONT SOFTWARE."""
+
+[[licenses]]
+name = "IBM Plex Sans JP"
+version = ""
+licenseId = "OFL-1.1"
+repository = "https://github.com/IBM/plex"
+publisher = "IBM Corp."
+email = ""
+url = "https://fonts.google.com/specimen/IBM+Plex+Sans+JP"
+licenseText = """Copyright © 2017 IBM Corp. with Reserved Font Name "Plex"
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+
+This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any individual, company, or other entity that created
+the Original Version.
+
+CONDITIONS & RESTRICTIONS
+1. Neither the Font Software nor any of its individual components,
+   may be sold in isolation.
+
+2. The Font Software may be bundled with other software that is
+   sold, provided that the buyer is not told they are buying only the
+   Font Software.
+
+3. The Font Software may be included in a package that contains other
+   software, provided that the Font Software does not advertise itself
+   as a complete product and that the other software does not advertise
+   itself as being enhanced with the Font Software.
+
+4. The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+   Software shall not be used to promote, endorse or advertise any
+   Modified Version, except to acknowledge the contribution(s) of the
+   Copyright Holder(s) and the Author(s) and with their explicit written
+   permission.
+
+5. The Font Software may be modified, altered, or added to, and may be
+   redistributed under the terms of this license, provided that:
+   a) the copyright notices are not removed or altered in any way.
+   b) the Modified Version is not distributed as part of a larger
+      product which contains the Font Software as a subset.
+   c) the Modified Version is clearly identified as such and is not
+      represented as the original software.
+   d) the name(s) of the Copyright Holder(s) and the Author(s) of the
+      Font Software shall not be used to promote, endorse or advertise
+      the Modified Version without the written permission of the
+      Copyright Holder(s) and/or the Author(s).
+   e) the Modified Version may be licensed under the same terms as this
+      license, or under different terms, provided that the terms of this
+      license are met.
+
+6. The Font Software may be converted to other formats, provided that:
+   a) the copyright notices are not removed or altered in any way.
+   b) the Converted Version is not distributed as part of a larger
+      product which contains the Font Software as a subset.
+   c) the Converted Version is clearly identified as such and is not
+      represented as the original software.
+   d) the name(s) of the Copyright Holder(s) and the Author(s) of the
+      Font Software shall not be used to promote, endorse or advertise
+      the Converted Version without the written permission of the
+      Copyright Holder(s) and/or the Author(s).
+   e) the Converted Version may be licensed under the same terms as this
+      license, or under different terms, provided that the terms of this
+      license are met.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE FONT
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE FONT SOFTWARE."""
+
+[[licenses]]
+name = "Portfolio Template"
+version = "2.0.0"
+licenseId = "Blue Oak Model License 1.0.0"
+repository = "https://github.com/fal-114514/site-template"
+publisher = "kkn3"
+email = ""
+url = "https://kkn3.booth.pm/"
+licenseText = """# Blue Oak Model License
+
+Version 1.0.0
+
+## Purpose
+
+This license gives everyone as much permission to work with
+this software as possible, while protecting contributors
+from liability.
+
+## Acceptance
+
+In order to receive this license, you must agree to its
+rules.  The rules of this license are both obligations
+under that agreement and conditions to your license.
+You must not do anything with this software that triggers
+a rule that you cannot or will not follow.
+
+## Copyright
+
+Each contributor licenses you to do everything with this
+software that would otherwise infringe that contributor's
+copyright in it.
+
+## Notices
+
+You must ensure that everyone who gets a copy of
+any part of this software from you, with or without
+changes, also gets the text of this license or a link to
+<https://blueoakcouncil.org/license/1.0.0>.
+
+## Excuse
+
+If anyone notifies you in writing that you have not
+complied with [Notices](#notices), you can keep your
+license by taking all practical steps to comply within 30
+days after the notice.  If you do not do so, your license
+ends immediately.
+
+## Patent
+
+Each contributor licenses you to do everything with this
+software that would otherwise infringe any patent claims
+they can license or become able to license.
+
+## Reliability
+
+No contributor can revoke this license.
+
+## No Liability
+
+***As far as the law allows, this software comes as is,
+without any warranty or condition, and no contributor
+will be liable to anyone for any damages related to this
+software or this license, under any kind of legal claim.***
+"""
