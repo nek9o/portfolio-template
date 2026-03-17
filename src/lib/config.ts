@@ -1,6 +1,5 @@
 /**
  * サイトの全体設定を一元管理するファイルです。
- * サイトの全体設定を一元管理するファイルです。
  * すべてのカスタマイズをこのファイルで行うことができます。
  */
 
@@ -12,7 +11,7 @@ export const config = {
     nameJp: "名前", // 日本語名
     nameEn: "Your Name", // 英語名 (OGPやタイトルバーにも使用)
     bio: "あなたの自己紹介文をここに書いてください。", // 自己紹介(1〜2行程度を推奨)
-    avatar: "/placeholder-avatar.png", // アバター画像のパス (staticフォルダ内)
+    avatar: "/avatar.png", // アバター画像のパス (staticフォルダ内)
   },
 
   // ---------------------------------------------------------
@@ -52,5 +51,6 @@ export const config = {
     themeColor: "#fbfbfb", // ブラウザのテーマカラー
     siteUrl: "https://your-site.pages.dev/", // デプロイ先のURL
     ogpImage: "https://your-site.pages.dev/placeholder-avatar.png", // SNSシェア時の画像URL
+    githubRepo: "https://github.com/your-username/your-repo", // GitHubリポジトリのURL (将来用: フッター等で表示したい場合)
   },
 };

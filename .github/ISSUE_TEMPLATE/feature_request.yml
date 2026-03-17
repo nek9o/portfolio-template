@@ -1,0 +1,35 @@
+name: ✨ 機能要望 (Feature Request)
+description: デザインの微調整やUX改善などの提案を行います。
+title: "[FEATURE]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### ⚠️ ご確認ください
+        本テンプレートは「ミニマリズム」を核としています。
+        そのため、**極限まで削ぎ落とされたデザインを崩すような機能追加の要望は、原則としてお受けしておりません。**
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 💡 提案内容
+      placeholder: どのような改善・機能追加を提案しますか？
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 🎯 目的・背景
+      placeholder: なぜその変更が必要だと考えましたか？（例：○○の操作が分かりにくいため、UXを改善したいなど）
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: design_policy
+    attributes:
+      label: デザインポリシーの確認
+      options:
+        - label: この提案は、本テンプレートの「ミニマルなデザイン」を損なうものではありませんか？
+          required: true

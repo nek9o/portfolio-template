@@ -1,0 +1,35 @@
+name: ❓ 質問・セットアップ相談
+description: 初期設定での困りごとや、使い方についての質問です。
+title: "[Q]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### ⚠️ ご確認ください
+        - デザインのカスタマイズ（CSSの調整など）に関する相談は、原則としてお受けしておりません。
+        - 趣味の範囲での運営のため、回答にお時間をいただく場合があります。
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: 🎯 実現したいこと
+      placeholder: 何をしようとしていますか？（例：○○の機能を有効にしたい、ローカルで起動させたい）
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🤔 困っていること
+      placeholder: どのステップで、どのようなエラーや不明点が出ましたか？
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 事前確認
+      options:
+        - label: 最新のコードに更新しても同様の事象が発生しますか？
+          required: true

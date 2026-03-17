@@ -1,0 +1,47 @@
+name: 🐛 バグ報告 (Bug Report)
+description: プログラムの不具合やエラーを報告します。
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        不具合の報告ありがとうございます。
+        スムーズな調査のため、可能な限り詳細な情報提供をお願いします。
+
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: 🛠 発生している状況
+      placeholder: 何が起きていますか？（例：ボタンを押しても反応しない、画面が真っ白になるなど）
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: 📝 再現手順
+      placeholder: |
+        1. ○○をインストールする
+        2. npm run dev を実行する
+        3. ブラウザで localhost:3000 を開く
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 💻 動作環境
+      value: |
+        - OS:
+        - ブラウザ:
+        - Node.js:
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs_or_configs
+    attributes:
+      label: 📂 関連ファイル (package.json / vite.config.ts) や エラーログ
+      description: エラーメッセージや設定ファイルをここに貼り付けてください。
+      render: typescript
