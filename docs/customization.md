@@ -11,7 +11,7 @@
     nameJp: "名前",                     // 日本語名
     nameEn: "Your Name",                // 英語名 (OGPやタイトルバーにも使用)
     bio: "あなたの自己紹介文をここに書いてください。", // 自己紹介
-    avatar: "/placeholder-avatar.png",  // アバター画像のパス (staticフォルダ内)
+    avatar: "/avatar.png",              // アバター画像のパス (staticフォルダ内)
   },
 ```
 
@@ -38,7 +38,7 @@
   seo: {
     themeColor: "#fbfbfb",             // ブラウザのテーマカラー
     siteUrl: "https://your-site.pages.dev/", // デプロイ先のURL
-    ogpImage: "https://your-site.pages.dev/placeholder-avatar.png", // SNSシェア時の画像URL
+    ogpImage: "https://your-site.pages.dev/avatar.png", // SNSシェア時の画像URL
   },
 ```
 

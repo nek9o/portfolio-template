@@ -1,5 +1,6 @@
 <script lang="ts">
   import LinkItem from "$lib/components/LinkItem.svelte";
+  import { config } from "$lib/config";
   import { onMount } from "svelte";
   import { fade, fly } from "svelte/transition";
 
@@ -34,7 +35,7 @@
 </script>
 
 <svelte:head>
-  <title>Licenses | Fal</title>
+  <title>Licenses | {config.profile.nameEn}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
@@ -99,16 +100,34 @@
                 </div>
               {/if}
 
-              {#if info.repository}
-                <div class="mt-4">
-                  <a
-                    href={info.repository}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-[11px] text-zinc-400 hover:text-zinc-800 border-b border-transparent hover:border-zinc-200 transition-all"
-                  >
-                    {info.repository}
-                  </a>
+              {#if info.repository || info.url}
+                <div class="mt-4 space-y-2">
+                  {#if info.repository}
+                    <div class="flex items-center gap-2">
+                      <span class="text-[9px] uppercase tracking-wider text-zinc-400 w-16">Repo</span>
+                      <a
+                        href={info.repository}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-[11px] text-zinc-400 hover:text-zinc-800 border-b border-transparent hover:border-zinc-200 transition-all truncate"
+                      >
+                        {info.repository}
+                      </a>
+                    </div>
+                  {/if}
+                  {#if info.url && info.url !== info.repository}
+                    <div class="flex items-center gap-2">
+                      <span class="text-[9px] uppercase tracking-wider text-zinc-400 w-16">Site</span>
+                      <a
+                        href={info.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-[11px] text-zinc-400 hover:text-zinc-800 border-b border-transparent hover:border-zinc-200 transition-all truncate"
+                      >
+                        {info.url}
+                      </a>
+                    </div>
+                  {/if}
                 </div>
               {/if}
 
@@ -134,7 +153,7 @@
       class="pb-16 text-center"
     >
       <div class="text-[9px] uppercase tracking-[0.2em] text-zinc-400">
-        &copy; {new Date().getFullYear()} Fal All rights reserved
+        &copy; {new Date().getFullYear()} {config.profile.nameEn}
       </div>
     </footer>
   {/if}

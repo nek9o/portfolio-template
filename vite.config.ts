@@ -58,7 +58,7 @@ const licensePlugin = license({
         if (!licenseId) return false;
 
         try {
-          return spdxSatisfies(licenseId, ALLOWED_LICENSES);
+          return (spdxSatisfies as any)(licenseId, ALLOWED_LICENSES);
         } catch (e) {
           // SPDX 式として解析できない場合は、念のため完全一致もチェック
           return (ALLOWED_LICENSES as string).includes(licenseId);
