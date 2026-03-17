@@ -52,5 +52,6 @@ export const config = {
     siteUrl: "https://your-site.pages.dev/", // デプロイ先のURL
     ogpImage: "https://your-site.pages.dev/placeholder-avatar.png", // SNSシェア時の画像URL
     githubRepo: "https://github.com/your-username/your-repo", // GitHubリポジトリのURL (将来用: フッター等で表示したい場合)
+    showAllRightsReserved: true, // フッターに "All rights reserved" を表示するかどうか
   },
 };
