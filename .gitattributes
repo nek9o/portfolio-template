@@ -1,9 +1,1 @@
-# Force LF for package-lock.json and yarn.lock
-package-lock.json text eol=lf
-yarn.lock text eol=lf
-*.json text eol=lf
-*.js text eol=lf
-*.ts text eol=lf
-*.tsx text eol=lf
-*.jsx text eol=lf
-*.html text eol=lf
+* text=auto eol=lf
