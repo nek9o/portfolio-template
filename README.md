@@ -64,8 +64,8 @@
 ### ライセンスの概要
 
 - **自由な利用:** 私用・商用を問わず、自由に利用・改変・配布いただけます。
-- **再配布時の条件:** 本ソフトウェアを再配布（他人に譲渡・公開）する場合は、このライセンス全文または [公式URL](https://blueoakcouncil.org/license/1.0.0) へのリンクを含める必要があります。
-- **免責事項:** 本ソフトウェアは「現状のまま」提供され、制作者はいかなる損害についても法令の範囲内で責任を負いません。
+- **再配布時の条件:** 本テンプレートを再配布（他人に譲渡・公開）する場合は、このライセンス全文または [公式URL](https://blueoakcouncil.org/license/1.0.0) へのリンクを含める必要があります。
+- **免責事項:** 本テンプレートは「現状のまま（AS-IS）」提供され、制作者はいかなる損害についても法令の範囲内で責任を負いません。
 
 詳細な条項については [LICENSE.md](./LICENSE.md) をご確認ください。
 
@@ -83,8 +83,18 @@
 
 > [!CAUTION]
 >
-> - 本テンプレートの使用によって生じた、いかなる損害やトラブルについても制作者は法令の範囲内で責任を負いません。
-> - 本ソフトウェアの一部(コードやデザイン)はAI技術を活用して作成されています。制作者は、当該生成物に関する第三者の知的財産権侵害の有無について完全な保証を行うものではありません。
-> - 制作者は法律の専門家ではありません。本規約やOSS等の使用に関する法的な詳細解釈について、制作者は判断を下すことはできません。疑義がある場合は、ご利用者様自身の責任において弁護士等の専門家へご相談ください。
-> - テンプレートの導入、カスタマイズ、および公開はすべて自己責任で行ってください。
-> - 使用しているライブラリやフォント等のライセンスについては、各提供元の規約に準じます。
+> - **保証の否認**: 本テンプレートは「現状のまま（AS-IS）」提供されます。制作者は、本テンプレートの動作、品質、特定の目的への適合性、および第三者の知的財産権の非侵害性を含め、明示・黙示を問わずいかなる保証も行いません。
+> - **責任の制限**: 本テンプレートの使用（導入、カスタマイズ、公開等を含む）によって生じた、直接的・間接的な損害、損失、またはトラブルについて、制作者は法律が許容する最大限の範囲において一切の責任を負いません。
+> - **AI技術の利用**: 本テンプレートの一部（コードやデザイン）はAI技術を活用して作成されています。そのため、制作者は当該生成物に関する第三者の知的財産権侵害の有無について完全な保証を行うことはできません。
+> - **法的解釈**: 制作者は法律の専門家ではありません。本規約やOSSライセンス等の詳細な法的解釈について判断を提供することはできません。疑義がある場合は、利用者自身の責任において弁護士等の専門家へご相談ください。
+> - **自己責任**: 本テンプレートの利用に関するすべての行為は、利用者自身の責任と判断において行ってください。
+
+## Disclaimer
+
+> [!CAUTION]
+>
+> - **Disclaimer of Warranty**: This template is provided "as-is" without warranty of any kind. The creator makes no warranties, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement of third-party intellectual property rights.
+> - **Limitation of Liability**: In no event shall the creator be liable for any damages, losses, or issues (including direct or indirect) arising from the use of this template (including installation, customization, and publication), to the maximum extent permitted by law.
+> - **AI Usage Disclosure**: Parts of this template (code and design) have been created with the assistance of Generative AI technologies. Therefore, the creator cannot fully guarantee that such content does not infringe upon the intellectual property rights of third parties.
+> - **Legal Interpretation**: The creator is not a legal expert and cannot provide definitive legal interpretations of this agreement or OSS licenses. If you have any concerns, please consult a legal professional at your own responsibility.
+> - **Self-Responsibility**: All actions related to the use of this template are to be performed at the user's own risk and discretion.
