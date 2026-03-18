@@ -10,6 +10,30 @@ import { defineConfig } from "vite";
 const require = createRequire(import.meta.url);
 
 /**
+ * リポジトリURLの表記ゆれを正規化し、クリーンなHTTPS URLに変換する関数
+ * 例: git+https://github.com/... -> https://github.com/...
+ */
+function cleanRepositoryUrl(url: string | undefined): string {
+  if (!url) return "";
+
+  let cleaned = url
+    // 先頭の不要なプロトコルを削除・置換
+    .replace(/^git\+https:\/\//, "https://")
+    .replace(/^git\+ssh:\/\/(git@)?/, "https://")
+    .replace(/^git:\/\//, "https://")
+    .replace(/^ssh:\/\/(git@)?github\.com\//, "https://github.com/")
+    .replace(/^git@github\.com:/, "https://github.com/");
+
+  // githubのショートハンド (例: github:user/repo) への対応もあれば
+  cleaned = cleaned.replace(/^github:/, "https://github.com/");
+
+  // 末尾の .git を削除 (フラグメント/ハッシュが続く可能性も考慮)
+  cleaned = cleaned.replace(/\.git(#.*)?$/, "$1");
+
+  return cleaned;
+}
+
+/**
  * 許可するライセンスの SPDX 式
  * 商用利用で一般的に安全とされるライセンスを OR 条件で結合
  */
@@ -91,6 +115,8 @@ const licensePlugin = license({
           ) {
             repository = (dep.repository as { url: string }).url;
           }
+
+          repository = cleanRepositoryUrl(repository);
 
           result[key] = {
             name: dep.name ?? "",
