@@ -12,7 +12,7 @@
 - **No FontAwesome:** ライセンス管理をシンプルにするため採用していません。アイコンが必要な場合はPhosphor IconsやSimple Iconsを推奨します。
 
 > [!TIP]
-> アイコンを使用する場合は[`licenses.manual.toml`](../src/lib/licenses.manual.toml)に追加するのを忘れないでください。
+> アイコンを使用する場合は[`licenses.manual.toml`](../src/lib/licenses.manual.toml)に追加するのを忘れないでください。\
 > 外部からインポートするライブラリ等は自動でライセンス情報が出力されません。
 
 ## 使用 AI モデル
