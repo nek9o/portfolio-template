@@ -50,6 +50,27 @@
 
 詳細なデザイン仕様については [docs/design_spec.md](./design_spec.md) を参照してください。
 
+## プライバシーポリシーの設定
+
+`config.ts`内の`privacyPolicy`オブジェクトでプライバシーポリシーの表示・非表示および内容を設定できます。
+
+```typescript
+  privacyPolicy: {
+    enabled: true,             // フッターにリンクを表示するか
+    items: [
+      {
+        title: "Analytics",
+        description: "Cloudflare Web Analytics の利用について...",
+      },
+    ],
+  },
+```
+
+## 手動管理ライセンスの追加
+
+npmパッケージ以外(Google FontsやCDN経由のライブラリなど)を使用している場合は、`src/lib/licenses.manual.toml`にライセンス情報を手動で追記してください。\
+ここに追記された情報は、ビルド時に自動生成されるライセンス一覧にマージされます。
+
 ## 重要な注意事項
 
 > [!CAUTION]

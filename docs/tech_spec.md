@@ -12,8 +12,8 @@
 - **No FontAwesome:** ライセンス管理をシンプルにするため採用していません。アイコンが必要な場合はPhosphor IconsやSimple Iconsを推奨します。
 
 > [!TIP]
-> アイコンを使用する場合は[`licenses.manual.toml`](../src/lib/licenses.manual.toml)に追加するのを忘れないでください。\
-> 外部からインポートするライブラリ等は自動でライセンス情報が出力されません。
+> アイコンや CDN 経由のライブラリを使用する場合は [`src/lib/licenses.manual.toml`](../src/lib/licenses.manual.toml) に追加してください。\
+> ビルドプロセスにおいて、`rollup-plugin-license` と自作スクリプト (`scripts/licenses-script.ts`) が連携し、npm パッケージと手動管理分の両方を統合した `static/licenses.json` を生成します。
 
 ## 使用 AI モデル
 
@@ -29,3 +29,8 @@
 - **Typography:**
   - **Lexend:** 数字や英字の可読性が高く、モダンな印象を与えるフォント。
   - **IBM Plex Sans JP:** 曲線が美しく、和文において独特の美学を持つフォント。
+
+## 実装上の特徴
+
+- **非同期ライセンス表示:** `/licenses`ページは静的なJSONファイル(`/licenses.json`)を非同期で取得してレンダリングします。これによりメインのバンドルサイズを増やすことなく膨大なライセンス情報を提示可能です。
+- **プライバシーポリシーの柔軟性:** `config.ts`で`enabled: true`にするとフッターにリンクが自動出現し`/privacy`ページが有効になります。Content-firstな設計により文章の追加も容易です。
