@@ -41,3 +41,7 @@
    ビルドが成功すると、`build` ディレクトリ(アダプターの設定による)に静的ファイルが生成されます。\
    Vercel, Cloudflare Pages, Netlify などのプラットフォームにデプロイ可能です。\
    デフォルトでは `@sveltejs/adapter-auto` が使用されています。
+
+## 補足
+
+- **ライセンス情報の生成**: 開発サーバー起動時 (`npm run dev`) またはビルド時 (`npm run build`) に、`static/licenses.json` が自動的に作成・更新されます。
