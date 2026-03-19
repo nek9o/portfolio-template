@@ -8,7 +8,7 @@
 
   let isMounted = false;
 
-  const { profile, links, projects, seo } = config;
+  const { profile, links, projects, seo, privacyPolicy } = config;
 
   onMount(() => {
     isMounted = true;
@@ -34,7 +34,6 @@
   <meta property="twitter:title" content="{profile.nameEn} | Profile" />
   <meta property="twitter:description" content="{profile.nameJp} ({profile.nameEn}) のポートフォリオサイトです。プロジェクトや活動内容を紹介しています。" />
   <meta property="twitter:image" content={seo.ogpImage} />
-
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
@@ -108,6 +107,14 @@
         <!-- 削除しないでください！削除した場合各OSSのライセンスを違反することになります。 -->
         <!-- Please do not delete this! Doing so will constitute a violation of the respective OSS licenses. -->
         <a href="/licenses" class="hover:text-zinc-800 underline underline-offset-2 transition-colors duration-300">Licenses</a>
+        {#if privacyPolicy?.enabled}
+          | <a
+              href="/privacy"
+              class="hover:text-zinc-800 underline underline-offset-2 transition-colors duration-300"
+            >
+              Privacy Policy
+            </a>
+        {/if}
       </div>
     </footer>
   {/if}
