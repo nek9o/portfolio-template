@@ -45,8 +45,8 @@
 
 ## デザインの調整
 
-- **配色**: `src/app.css` 内の CSS 変数を編集することで、サイト全体のトーンを変更できます。
-- **フォント**: `src/app.css` または `src/routes/+page.svelte` の Google Fonts URL を変更してください。
+- **配色**: `src/app.css` 内の `@theme` ブロックまたは CSS 変数を編集することで、サイト全体のトーンを変更できます。
+- **フォント**: `src/app.css` の `@theme` 内のフォント定義、または `src/routes/+page.svelte` の Google Fonts URL を変更してください。
 
 詳細なデザイン仕様については [docs/design_spec.md](./design_spec.md) を参照してください。
 

@@ -1,6 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans JP", sans-serif;
+  --font-base: "Lexend", "IBM Plex Sans JP", sans-serif;
+
+  --color-bg-primary: #fbfbfb;
+  --color-bg-secondary: #f7f7f7;
+  --color-text-primary: #27272a;
+  --color-text-secondary: #71717a;
+  --color-text-hover: #27272a;
+  --color-border-dim: #f1f1f2;
+}
 
 :root {
   /* 英字 → Lexend / 日本語 → IBM Plex Sans JP の順で適用 */
