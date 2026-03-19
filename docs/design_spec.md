@@ -59,14 +59,21 @@
 
 ## 6. 再利用ガイド (Reuse Guide)
 
-### Tailwind Preset ([tailwind.preset.js](./tailwind.preset.js))
+### Tailwind Theme ([src/app.css](../src/app.css))
 
-他のプロジェクトでこの配色やフォントを再現するには、プリセットファイルを読み込んでください。
+他のプロジェクトでこの配色やフォントを再現するには、CSS ファイル内の `@theme` ブロックをコピーして使用してください。
 
-```javascript
-/* tailwind.config.js での適用方法 */
-export default {
-  presets: [require("./tailwind.preset.js")],
-  // ...
-};
+```css
+/* app.css での定義例 */
+@theme {
+  --font-sans: 'Noto Sans JP', sans-serif;
+  --font-base: 'Lexend', 'IBM Plex Sans JP', sans-serif;
+
+  --color-bg-primary: #fbfbfb;
+  --color-bg-secondary: #f7f7f7;
+  --color-text-primary: #27272a;
+  --color-text-secondary: #71717a;
+  --color-text-hover: #27272a;
+  --color-border-dim: #f1f1f2;
+}
 ```

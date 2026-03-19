@@ -6,7 +6,7 @@
 
 - **Framework:** SvelteKit
   - React等に比べ依存関係が少なく、ビルド後のコードも軽量です。ライセンス管理も容易です。
-- **Styling:** TailwindCSS v3
+- **Styling:** TailwindCSS v4
   - 設定の柔軟性と、AIツールとの高い親和性を優先して採用しました。
 - **No UI Library:** `shadcn/ui` 等のコンポーネントライブラリに依存せず、すべてのパーツをスクラッチで実装することで、独自のデザインを追求しています。
 - **No FontAwesome:** ライセンス管理をシンプルにするため採用していません。アイコンが必要な場合はPhosphor IconsやSimple Iconsを推奨します。
