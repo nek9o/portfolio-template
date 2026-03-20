@@ -101,13 +101,3 @@
 > - **AI技術の利用**: 本テンプレートの一部（コードやデザイン）はAI技術を活用して作成されています。そのため、制作者は当該生成物に関する第三者の知的財産権侵害の有無について完全な保証を行うことはできません。
 > - **法的解釈**: 制作者は法律の専門家ではありません。本規約やOSSライセンス等の詳細な法的解釈について判断を提供することはできません。疑義がある場合は、利用者自身の責任において弁護士等の専門家へご相談ください。
 > - **自己責任**: 本テンプレートの利用に関するすべての行為は、利用者自身の責任と判断において行ってください。
-
-## Disclaimer
-
-> [!CAUTION]
->
-> - **Disclaimer of Warranty**: This template is provided "as-is" without warranty of any kind. The creator makes no warranties, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement of third-party intellectual property rights.
-> - **Limitation of Liability**: In no event shall the creator be liable for any damages, losses, or issues (including direct or indirect) arising from the use of this template (including installation, customization, and publication), to the maximum extent permitted by law.
-> - **AI Usage Disclosure**: Parts of this template (code and design) have been created with the assistance of Generative AI technologies. Therefore, the creator cannot fully guarantee that such content does not infringe upon the intellectual property rights of third parties.
-> - **Legal Interpretation**: The creator is not a legal expert and cannot provide definitive legal interpretations of this agreement or OSS licenses. If you have any concerns, please consult a legal professional at your own responsibility.
-> - **Self-Responsibility**: All actions related to the use of this template are to be performed at the user's own risk and discretion.
