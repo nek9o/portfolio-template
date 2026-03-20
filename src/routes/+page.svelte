@@ -77,7 +77,7 @@
     <section class="mt-32 anim-fade-up">
       <div class="w-full space-y-0 text-left">
         <h2 class="text-[10px] uppercase tracking-[0.3em] text-zinc-400 font-medium mb-8">Links</h2>
-        {#each links as link, i}
+        {#each links as link, i (link.url)}
           <LinkItem label={link.label} url={link.url} border={i < links.length - 1} />
         {/each}
       </div>
@@ -88,7 +88,7 @@
       <h2 class="text-[10px] uppercase tracking-[0.3em] text-zinc-400 font-medium mb-6">Projects</h2>
 
       <div class="space-y-0">
-        {#each projects as project, i}
+        {#each projects as project, i (project.url)}
           <ProjectCard {...project} border={i < projects.length - 1} />
         {/each}
       </div>
