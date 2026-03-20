@@ -4,6 +4,7 @@
   import ProjectCard from "$lib/components/ProjectCard.svelte";
   import { config } from "$lib/config";
 
+  import { getBorderClass } from "$lib/utils/borderClass";
   const { profile, links, projects, seo, privacyPolicy } = config;
 </script>
 
@@ -35,7 +36,7 @@
   />
 </svelte:head>
 
-<div class="min-h-screen bg-(--bg-primary) text-zinc-800 selection:bg-zinc-800 selection:text-zinc-50 flex flex-col font-base transition-colors duration-500">
+<div class="min-h-screen bg-bgPrimary text-textPrimary selection:bg-textPrimary selection:text-bgPrimary flex flex-col font-base transition-colors duration-500">
   <main
     class="
       grow
@@ -57,14 +58,14 @@
           <h1 class="text-2xl font-medium tracking-tight mb-4">
             {profile.nameJp} / {profile.nameEn}
           </h1>
-          <p class="text-sm text-zinc-600 leading-relaxed max-w-xs whitespace-pre-wrap mb-6">
+          <p class="text-sm text-textDimmed leading-relaxed max-w-xs whitespace-pre-wrap mb-6">
             {profile.bio}
           </p>
 
           {#if profile.showDetailedAbout}
             <a
               href="/about"
-              class="text-[10px] uppercase tracking-widest font-medium text-zinc-500 hover:text-zinc-800 transition-colors duration-300"
+              class="text-[10px] uppercase tracking-widest font-medium text-textSecondary hover:text-textPrimary transition-colors duration-300"
             >
               Read More
             </a>
@@ -76,7 +77,7 @@
     <!-- 極限までミニマルなリンク集 -->
     <section class="mt-32 anim-fade-up">
       <div class="w-full space-y-0 text-left">
-        <h2 class="text-[10px] uppercase tracking-[0.3em] text-zinc-400 font-medium mb-8">Links</h2>
+        <h2 class="text-[10px] uppercase tracking-[0.3em] text-textLight font-medium mb-8">Links</h2>
         {#each links as link, i (link.url)}
           <LinkItem label={link.label} url={link.url} border={i < links.length - 1} />
         {/each}
@@ -85,7 +86,7 @@
 
     <!-- プロジェクトセクション (完全モノクロ) -->
     <section class="mt-32 anim-fade-up anim-delay-200">
-      <h2 class="text-[10px] uppercase tracking-[0.3em] text-zinc-400 font-medium mb-6">Projects</h2>
+      <h2 class="text-[10px] uppercase tracking-[0.3em] text-textLight font-medium mb-6">Projects</h2>
 
       <div class="space-y-0">
         {#each projects as project, i (project.url)}
@@ -97,26 +98,27 @@
 
   <!-- フッター -->
   <footer class="pb-16 text-center anim-fade anim-delay-600">
-    <div class="text-[9px] uppercase tracking-[0.2em] text-zinc-400 mb-2">
+    <div class="text-[9px] uppercase tracking-[0.2em] text-textLight mb-2">
       &copy; {new Date().getFullYear()} {profile.nameEn}{seo.showAllRightsReserved ? '. All rights reserved' : ''}
     </div>
 
-    <div class="text-[9px] text-zinc-400">
-      Fonts: <a href="https://fonts.google.com/specimen/Lexend" target="_blank" class="hover:text-zinc-800 border-b border-transparent hover:border-zinc-300/80 transition-all duration-300">Lexend</a> &
-      <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-zinc-800 border-b border-transparent hover:border-zinc-300/80 transition-all duration-300">IBM Plex Sans JP</a>
+    <div class="text-[9px] text-textLight">
+      Fonts: <a href="https://fonts.google.com/specimen/Lexend" target="_blank" class="hover:text-textPrimary border-b {getBorderClass(false)} transition-all duration-300">Lexend</a> &
+      <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-textPrimary border-b {getBorderClass(false)} transition-all duration-300">IBM Plex Sans JP</a>
       <!-- 削除しないでください！削除した場合各OSSのライセンスを違反することになります。 -->
       <!-- Please do not delete this! Doing so will constitute a violation of the respective OSS licenses. -->
-      | <a href="/licenses" class="hover:text-zinc-800 border-b border-transparent hover:border-zinc-300/80 transition-all duration-300">Licenses</a>
+      | <a href="/licenses" class="hover:text-textPrimary border-b {getBorderClass(false)} transition-all duration-300">Licenses</a>
       {#if privacyPolicy?.enabled}
         | <a
             href="/privacy"
-            class="hover:text-zinc-800 border-b border-transparent hover:border-zinc-300/80 transition-all duration-300"
+            class="hover:text-textPrimary border-b {getBorderClass(false)} transition-all duration-300"
           >
             Privacy Policy
           </a>
       {/if}
     </div>
   </footer>
+
 </div>
 
 <style>

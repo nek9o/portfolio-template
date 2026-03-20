@@ -231,7 +231,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE FONT SOFTWARE."""
 
 [[licenses]]
 name = "Portfolio Template"
-version = "3.0.0"
+version = "4.0.0"
 licenseId = "BlueOak-1.0.0"
 repository = "https://github.com/fal-114514/portfolio-template"
 publisher = "kkn3"
