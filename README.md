@@ -1,5 +1,12 @@
 # Portfolio Template
 
+[![SvelteKit](https://img.shields.io/github/package-json/dependency-version/nek9o/portfolio-template/dev/@sveltejs/kit/main?label=SvelteKit&color=FF3E00&style=flat)](https://kit.svelte.dev/)
+[![Tailwind CSS](https://img.shields.io/github/package-json/dependency-version/nek9o/portfolio-template/dev/tailwindcss/main?label=Tailwind_CSS&color=38B2AC&style=flat)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/github/package-json/dependency-version/nek9o/portfolio-template/dev/typescript/main?label=TypeScript&color=3178C6&style=flat)](https://www.typescriptlang.org/)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/nek9o/portfolio-template/build.yml?branch=main&label=build&style=flat)](https://github.com/nek9o/portfolio-template/actions)
+[![CodeFactor](https://img.shields.io/codefactor/grade/github/nek9o/portfolio-template?label=codefactor&style=flat)](https://www.codefactor.io/repository/github/nek9o/portfolio-template)
+[![License](https://img.shields.io/badge/License-Blue_Oak-blue?style=flat)](./LICENSE.md)
+
 「余白で魅せるポートフォリオ」を最短で作れる、ミニマル特化のSvelteKitテンプレートです。\
 本テンプレートは、設定ファイル `src/lib/config.ts` を編集するだけで、すべてのカスタマイズが完結するミニマルなポートフォリオテンプレートです。
 
