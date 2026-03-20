@@ -55,11 +55,11 @@
         w-full
       "
     >
+      <!-- プロフィール・bioセクション -->
       <section
         in:fly={{ y: 10, duration: 800 }}
-        class="mb-32"
       >
-        <div class="flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-12 mb-16">
+        <div class="flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-12">
           <div class="order-first sm:order-last shrink-0">
             <Avatar src={profile.avatar} alt={profile.nameEn} class="mb-4 sm:mb-0" />
           </div>
@@ -68,27 +68,31 @@
             <h1 class="text-2xl font-medium tracking-tight mb-4">
               {profile.nameJp} / {profile.nameEn}
             </h1>
-            <p class="text-sm text-zinc-600 leading-relaxed max-w-xs whitespace-pre-wrap {profile.showDetailedAbout ? 'mb-6' : 'mb-0'}">
+            <p class="text-sm text-zinc-600 leading-relaxed max-w-xs whitespace-pre-wrap mb-6">
               {profile.bio}
             </p>
 
             {#if profile.showDetailedAbout}
-              <div class="mt-6 mb-8">
-                <a
-                  href="/about"
-                  class="text-[10px] uppercase tracking-widest text-zinc-500 hover:text-zinc-800 transition-colors duration-300"
-                >
-                  Read More
-                </a>
-              </div>
+              <a
+                href="/about"
+                class="text-[10px] uppercase tracking-widest font-medium text-zinc-500 hover:text-zinc-800 transition-colors duration-300"
+              >
+                Read More
+              </a>
             {/if}
           </div>
         </div>
+      </section>
 
-        <!-- 極限までミニマルなリンク集 -->
+      <!-- 極限までミニマルなリンク集 -->
+      <section
+        in:fly={{ y: 10, duration: 800 }}
+        class="mt-32"
+      >
         <div class="w-full space-y-0 text-left">
-          {#each links as link}
-            <LinkItem label={link.label} url={link.url} />
+          <h2 class="text-[10px] uppercase tracking-[0.3em] text-zinc-400 font-medium mb-8">Links</h2>
+          {#each links as link, i}
+            <LinkItem label={link.label} url={link.url} border={i < links.length - 1} />
           {/each}
         </div>
       </section>
@@ -96,13 +100,13 @@
       <!-- プロジェクトセクション (完全モノクロ) -->
       <section
         in:fly={{ y: 10, duration: 800, delay: 200 }}
-        class="mt-48 space-y-12"
+        class="mt-32"
       >
-        <h2 class="text-[10px] uppercase tracking-[0.3em] text-zinc-400 font-medium">Projects</h2>
+        <h2 class="text-[10px] uppercase tracking-[0.3em] text-zinc-400 font-medium mb-6">Projects</h2>
 
         <div class="space-y-0">
-          {#each projects as project}
-            <ProjectCard {...project} />
+          {#each projects as project, i}
+            <ProjectCard {...project} border={i < projects.length - 1} />
           {/each}
         </div>
       </section>
@@ -117,19 +121,16 @@
         &copy; {new Date().getFullYear()} {profile.nameEn}{seo.showAllRightsReserved ? '. All rights reserved' : ''}
       </div>
 
-      <div class="text-[9px] text-zinc-400 mb-1">
-        Fonts: <a href="https://fonts.google.com/specimen/Lexend" target="_blank" class="hover:text-zinc-800 underline underline-offset-2 transition-colors duration-300">Lexend</a> &
-        <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-zinc-800 underline underline-offset-2 transition-colors duration-300">IBM Plex Sans JP</a>
-      </div>
-
       <div class="text-[9px] text-zinc-400">
+        Fonts: <a href="https://fonts.google.com/specimen/Lexend" target="_blank" class="hover:text-zinc-800 border-b border-transparent hover:border-zinc-300/80 transition-all duration-300">Lexend</a> &
+        <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-zinc-800 border-b border-transparent hover:border-zinc-300/80 transition-all duration-300">IBM Plex Sans JP</a>
         <!-- 削除しないでください！削除した場合各OSSのライセンスを違反することになります。 -->
         <!-- Please do not delete this! Doing so will constitute a violation of the respective OSS licenses. -->
-        <a href="/licenses" class="hover:text-zinc-800 underline underline-offset-2 transition-colors duration-300">Licenses</a>
+        | <a href="/licenses" class="hover:text-zinc-800 border-b border-transparent hover:border-zinc-300/80 transition-all duration-300">Licenses</a>
         {#if privacyPolicy?.enabled}
           | <a
               href="/privacy"
-              class="hover:text-zinc-800 underline underline-offset-2 transition-colors duration-300"
+              class="hover:text-zinc-800 border-b border-transparent hover:border-zinc-300/80 transition-all duration-300"
             >
               Privacy Policy
             </a>
