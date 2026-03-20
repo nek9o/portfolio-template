@@ -20,7 +20,7 @@
     flex items-center justify-between
     -mx-4 px-4
     py-4 {effectiveNoBorder ? '' : `border-b ${getBorderClass(border)}`}
-    text-sm text-zinc-500
+    text-sm text-textSecondary
     transition-all duration-200
     whitespace-nowrap
   "
@@ -33,7 +33,7 @@
     <div
       class="
         indicator-line
-        absolute top-0.5 bottom-0.5 w-0.5 bg-zinc-800 opacity-0 transition-opacity duration-300
+        absolute top-0.5 bottom-0.5 w-0.5 bg-textPrimary opacity-0 transition-opacity duration-300
         {reverse ? '-right-4' : '-left-4'}
         pointer-events-none
       "
@@ -61,7 +61,7 @@
 
     /* 文字色のホバーもマウス時のみに限定 */
     .group:hover {
-      @apply text-zinc-800;
+      @apply text-textPrimary;
     }
   }
 </style>

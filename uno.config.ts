@@ -23,8 +23,11 @@ export default defineConfig({
       bgSecondary: '#f7f7f7',
       textPrimary: '#27272a',
       textSecondary: '#71717a',
+      textDimmed: '#52525b',
+      textLight: '#a1a1aa',
       textHover: '#27272a',
       borderDim: '#f1f1f2',
+      bgSelection: '#18181b',
     },
   },
 });
