@@ -1,9 +1,13 @@
 <script lang="ts">
+  import { getBorderClass } from '$lib/utils/borderClass';
   export let label: string;
   export let url: string;
   export let external = true;
   export let border = true;
   export let reverse = false;
+  /** 未指定時はreverse(Backボタン判定)を継承。trueのとき区切り線をホバー時含め完全に非表示 */
+  export let noBorder: boolean | undefined = undefined;
+  $: effectiveNoBorder = noBorder ?? reverse;
 </script>
 
 <a
@@ -14,7 +18,7 @@
     group relative
     flex items-center justify-between
     -mx-4 px-4
-    {border ? 'py-4 border-b border-zinc-200/50 hover:border-zinc-300/80' : ''}
+    py-4 {effectiveNoBorder ? '' : `border-b ${getBorderClass(border)}`}
     text-sm text-zinc-500 hover:text-zinc-800
     transition-colors duration-300
     whitespace-nowrap
