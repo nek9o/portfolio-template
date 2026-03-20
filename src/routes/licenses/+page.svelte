@@ -109,7 +109,7 @@
                         href={info.repository}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-[11px] text-zinc-400 hover:text-zinc-800 border-b border-transparent hover:border-zinc-200 transition-all truncate"
+                        class="text-[11px] text-zinc-400 hover:text-zinc-800 border-b border-transparent hover:border-zinc-300/80 transition-all truncate"
                       >
                         {info.repository}
                       </a>
@@ -122,7 +122,7 @@
                         href={info.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-[11px] text-zinc-400 hover:text-zinc-800 border-b border-transparent hover:border-zinc-200 transition-all truncate"
+                        class="text-[11px] text-zinc-400 hover:text-zinc-800 border-b border-transparent hover:border-zinc-300/80 transition-all truncate"
                       >
                         {info.url}
                       </a>
