@@ -44,7 +44,8 @@
 </a>
 
 <style>
-  @reference "../../app.css";
+  /* UnoCSS handles @apply without @reference */
+
 
   @media (hover: hover) {
     /* ホバーに対応したデバイス（PCなど）でのみ、インジケーター表示とスライドを有効化 */
