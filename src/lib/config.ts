@@ -8,11 +8,10 @@ export const config = {
   // 1. プロフィール設定 (Profile Settings)
   // ---------------------------------------------------------
   profile: {
-    nameJp: '名前', // 日本語名
-    nameEn: 'Your Name', // 英語名 (OGPやタイトルバーにも使用)
-    bio: `あなたの自己紹介文をここに書いてください。\n2行目
-通常の改行も可能です`, // 自己紹介(1〜2行程度を推奨)
-    avatar: '/avatar.png', // アバター画像のパス (staticフォルダ内)
+    nameJp: '山田 太郎', // 日本語名
+    nameEn: 'Taro Yamada', // 英語名 (OGPやタイトルバーにも使用)
+    bio: `エンジニア / デザイナー。\nオープンソースと創ることが好きです。`, // 自己紹介(1〜2行程度を推奨)
+    avatar: '/avatar.svg', // アバター画像のパス (staticフォルダ内)
     detailedAbout: `ここには、より詳細な自己紹介文を記述できます。
 何行にもわたる文章や、これまでの経歴、趣味、大切にしている価値観などを自由に記載してください。
 デザインはシンプルにまとめているため、読みやすさを重視した構成になっています。`, // 追加の自己紹介文
@@ -23,10 +22,10 @@ export const config = {
   // 2. リンク集 (Links)
   // ---------------------------------------------------------
   links: [
-    { label: 'Twitter (X)', url: 'https://twitter.com/your_account' },
+    { label: 'Twitter / X', url: 'https://twitter.com/your_account' },
     { label: 'GitHub', url: 'https://github.com/your_account' },
     { label: 'Zenn', url: 'https://zenn.dev/your_account' },
-    { label: 'Note', url: 'https://note.com/your_account' },
+    { label: 'note', url: 'https://note.com/your_account' },
     // 必要に応じて追加・削除してください
   ],
 
@@ -35,18 +34,18 @@ export const config = {
   // ---------------------------------------------------------
   projects: [
     {
-      name: 'Project Name 1',
-      description: 'Project description goes here. Keep it concise and clear.',
-      url: 'https://example.com/project1',
+      name: 'Portfolio Template',
+      description: 'SvelteKit + Tailwind CSS v4 で作られた、ミニマルなポートフォリオテンプレートです。',
+      url: 'https://github.com/your_account/your_repo',
       language: 'SvelteKit',
     },
     {
-      name: 'Project Name 2',
-      description: "Another project description. Show off what you've built!",
+      name: 'My Project',
+      description: 'プロジェクトの説明をここに書いてください。簡潔かつ具体的に記述することをおすすめします。',
       url: 'https://example.com/project2',
       language: 'TypeScript',
     },
-    // プロジェクトを追加する場合は、上のブロックを編集してください
+    // プロジェクトを追加する場合は、上のブロックをコピーしてください
   ],
 
   // ---------------------------------------------------------
@@ -55,8 +54,8 @@ export const config = {
   seo: {
     themeColor: '#fbfbfb', // ブラウザのテーマカラー
     siteUrl: 'https://your-site.pages.dev/', // デプロイ先のURL
-    ogpImage: 'https://your-site.pages.dev/placeholder-avatar.png', // SNSシェア時の画像URL
-    githubRepo: 'https://github.com/your-username/your-repo', // GitHubリポジトリのURL (将来用: フッター等で表示したい場合)
+    ogpImage: 'https://your-site.pages.dev/ogp.png', // SNSシェア時の画像URL (デプロイ後に実際のURLへ変更してください)
+    githubRepo: 'https://github.com/your-username/your-repo', // GitHubリポジトリのURL
     showAllRightsReserved: true, // フッターに "All rights reserved" を表示するかどうか
   },
 
