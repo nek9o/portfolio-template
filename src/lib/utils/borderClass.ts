@@ -9,6 +9,6 @@
  */
 export function getBorderClass(showAlways: boolean): string {
   return showAlways
-    ? 'border-zinc-200/50 hover:border-zinc-300/80'
-    : 'border-transparent hover:border-zinc-300/80';
+    ? 'border-borderDim hover:border-textSecondary/50' /* true */
+    : 'border-transparent hover:border-textSecondary/50'; /* false */
 }

@@ -1,7 +1,7 @@
-import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import path from 'path';
 import license from 'rollup-plugin-license';
+import UnoCSS from 'unocss/vite';
 import { defineConfig } from 'vite';
 import {
   formatLicenseData,
@@ -34,5 +34,5 @@ const licensePlugin = license({
 });
 
 export default defineConfig({
-  plugins: [tailwindcss(), sveltekit(), licensePlugin],
+  plugins: [UnoCSS(), sveltekit(), licensePlugin],
 });
