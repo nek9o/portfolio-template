@@ -20,16 +20,20 @@
     flex items-center justify-between
     -mx-4 px-4
     py-4 {effectiveNoBorder ? '' : `border-b ${getBorderClass(border)}`}
-    text-sm text-zinc-500 hover:text-zinc-800
-    transition-colors duration-300
+    text-sm text-zinc-500
+    transition-all duration-200
     whitespace-nowrap
   "
 >
-  <div class="relative transform {reverse ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'} transition-transform duration-300 will-change-transform">
+  <div
+    class="indicator-container relative transform transition-transform duration-300 will-change-transform"
+    class:reverse
+  >
     <!-- インジケーター -->
     <div
       class="
-        absolute top-0.5 bottom-0.5 w-0.5 bg-zinc-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+        indicator-line
+        absolute top-0.5 bottom-0.5 w-0.5 bg-zinc-800 opacity-0 transition-opacity duration-300
         {reverse ? '-right-4' : '-left-4'}
         pointer-events-none
       "
@@ -38,3 +42,25 @@
     <span class="inline-block tracking-wide">{label}</span>
   </div>
 </a>
+
+<style>
+  @reference "../../app.css";
+
+  @media (hover: hover) {
+    /* ホバーに対応したデバイス（PCなど）でのみ、インジケーター表示とスライドを有効化 */
+    .group:hover .indicator-container:not(.reverse) {
+      transform: translateX(0.25rem);
+    }
+    .group:hover .indicator-container.reverse {
+      transform: translateX(-0.25rem);
+    }
+    .group:hover .indicator-line {
+      opacity: 1;
+    }
+
+    /* 文字色のホバーもマウス時のみに限定 */
+    .group:hover {
+      @apply text-zinc-800;
+    }
+  }
+</style>
