@@ -1,3 +1,5 @@
+Copyright (c) 2026 nek9o
+
 # Blue Oak Model License
 
 Version 1.0.0
