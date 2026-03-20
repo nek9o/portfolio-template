@@ -37,7 +37,8 @@
 </a>
 
 <style>
-  @reference "../../app.css";
+  /* UnoCSS handles @apply without @reference */
+
 
   @media (hover: hover) {
     /* マウスホバー時のみスライドとインジケーター表示を有効化 */
