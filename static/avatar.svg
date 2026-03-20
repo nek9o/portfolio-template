@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 背景 -->
+  <rect width="128" height="128" rx="64" fill="#f4f4f5"/>
+
+  <!-- 人物アイコン (シンプルなシルエット) -->
+  <!-- 頭部 -->
+  <circle cx="64" cy="48" r="18" fill="#a1a1aa"/>
+  <!-- 胴体 -->
+  <path d="M 24 108 Q 24 78 64 78 Q 104 78 104 108 Z" fill="#a1a1aa"/>
+    <rect x="56" y="46" width="0" height="0" fill="rgb(255, 255, 255)"/>
+</svg>

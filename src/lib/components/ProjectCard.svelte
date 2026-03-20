@@ -11,6 +11,7 @@
   href={url}
   target="_blank"
   rel="noopener noreferrer"
+  aria-label="{name} (新しいタブで開く)"
   class="
     group relative
     flex flex-col space-y-1.5
