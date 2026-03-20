@@ -1,8 +1,10 @@
 <script lang="ts">
+  import { getBorderClass } from '$lib/utils/borderClass';
   export let name: string;
   export let description: string;
   export let url: string;
   export let language: string;
+  export let border = true;
 </script>
 
 <a
@@ -13,7 +15,7 @@
     group relative
     flex flex-col space-y-1.5
     -mx-4 px-4
-    py-6 border-b border-zinc-200/50 hover:border-zinc-300/80
+    py-6 border-b {getBorderClass(border)}
     transition-colors duration-300
   "
 >
