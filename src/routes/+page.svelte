@@ -51,34 +51,39 @@
         mx-auto
         px-6
         py-32 sm:py-48
-        max-w-md
+        max-w-lg
         w-full
       "
     >
-      <!-- プロフィールセクション -->
       <section
         in:fly={{ y: 10, duration: 800 }}
-        class="flex flex-col items-center text-center mb-32"
+        class="mb-32"
       >
-        <Avatar src={profile.avatar} alt={profile.nameEn} />
+        <div class="flex flex-col sm:flex-row items-start justify-between gap-12 mb-16">
+          <div class="flex-1 min-w-0">
+            <h1 class="text-2xl font-medium tracking-tight mb-4">
+              {profile.nameJp} / {profile.nameEn}
+            </h1>
+            <p class="text-sm text-zinc-600 leading-relaxed max-w-xs whitespace-pre-wrap {profile.showDetailedAbout ? 'mb-6' : 'mb-0'}">
+              {profile.bio}
+            </p>
 
-        <h1 class="text-2xl font-medium tracking-tight mb-4">
-          {profile.nameJp} / {profile.nameEn}
-        </h1>
-        <p class="text-sm text-zinc-600 leading-relaxed max-w-xs mx-auto {profile.showDetailedAbout ? 'mb-12' : 'mb-32'}">
-          {profile.bio}
-        </p>
-
-        {#if profile.showDetailedAbout}
-          <div class="mb-24">
-            <a
-              href="/about"
-              class="text-[10px] uppercase tracking-widest text-zinc-500 hover:text-zinc-800 transition-colors duration-300"
-            >
-              Read More
-            </a>
+            {#if profile.showDetailedAbout}
+              <div class="mt-6 mb-8">
+                <a
+                  href="/about"
+                  class="text-[10px] uppercase tracking-widest text-zinc-500 hover:text-zinc-800 transition-colors duration-300"
+                >
+                  Read More
+                </a>
+              </div>
+            {/if}
           </div>
-        {/if}
+
+          <div class="shrink-0">
+            <Avatar src={profile.avatar} alt={profile.nameEn} class="mb-12 sm:mb-0" />
+          </div>
+        </div>
 
         <!-- 極限までミニマルなリンク集 -->
         <div class="w-full space-y-0 text-left">

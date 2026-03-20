@@ -66,7 +66,7 @@
       in:fade={{ duration: 1000, delay: 600 }}
       class="pb-16 text-center"
     >
-      <div class="text-[9px] uppercase tracking-[0.2em] text-zinc-400 mb-2">
+      <div class="text-[9px] uppercase tracking-[0.2em] text-zinc-400">
         &copy; {new Date().getFullYear()} {profile.nameEn}{seo.showAllRightsReserved ? '. All rights reserved' : ''}
       </div>
     </footer>
