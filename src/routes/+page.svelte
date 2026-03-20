@@ -59,7 +59,11 @@
         in:fly={{ y: 10, duration: 800 }}
         class="mb-32"
       >
-        <div class="flex flex-col sm:flex-row items-start justify-between gap-12 mb-16">
+        <div class="flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-12 mb-16">
+          <div class="order-first sm:order-last shrink-0">
+            <Avatar src={profile.avatar} alt={profile.nameEn} class="mb-4 sm:mb-0" />
+          </div>
+
           <div class="flex-1 min-w-0">
             <h1 class="text-2xl font-medium tracking-tight mb-4">
               {profile.nameJp} / {profile.nameEn}
@@ -78,10 +82,6 @@
                 </a>
               </div>
             {/if}
-          </div>
-
-          <div class="shrink-0">
-            <Avatar src={profile.avatar} alt={profile.nameEn} class="mb-12 sm:mb-0" />
           </div>
         </div>
 
