@@ -20,7 +20,7 @@
       class="
         w-full h-full
         object-cover
-        grayscale-30
+        grayscale-[30%]
       "
       loading="eager"
       decoding="async"
@@ -29,7 +29,7 @@
     />
   </div>
   <!-- 境界をなじませるオーバーレイ (Soft Fade) -->
-  <div class="absolute inset-0 rounded-[50%] shadow-[inset_0_0_20px_4px_var(--bg-primary)] ring-(--bg-primary) ring-[1.5px] pointer-events-none"></div>
+  <div class="absolute inset-0 rounded-[50%] shadow-[inset_0_0_20px_4px_var(--bg-primary)] ring-[var(--bg-primary)] ring-[1.5px] pointer-events-none"></div>
   <!-- 外側の柔らかな影 -->
   <div class="absolute inset-0 rounded-[50%] shadow-[0_10px_40px_rgba(0,0,0,0.03)] -z-10"></div>
 </div>

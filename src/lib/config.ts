@@ -35,7 +35,7 @@ export const config = {
   projects: [
     {
       name: 'Portfolio Template',
-      description: 'SvelteKit + Tailwind CSS v4 で作られた、ミニマルなポートフォリオテンプレートです。',
+      description: 'SvelteKit + UnoCSS で作られた、ミニマルなポートフォリオテンプレートです。',
       url: 'https://github.com/your_account/your_repo',
       language: 'SvelteKit',
     },

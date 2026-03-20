@@ -20,14 +20,14 @@
 | `--text-secondary` | `#71717a` | 補助テキスト・説明文                      |
 | `--border`         | `#f1f1f2` | 境界線・区切り線                          |
 
-### Tailwind Zinc Palette
+### UnoCSS Color Palette
 
-| クラス     | HEX       | 主な適用箇所                   |
-| :--------- | :-------- | :----------------------------- |
-| `zinc-800` | `#27272a` | 見出し、選択時のアクセント色   |
+| クラス     | HEX       | 主な適用箇所                              |
+| :--------- | :-------- | :---------------------------------------- |
+| `zinc-800` | `#27272a` | 見出し、選択時のアクセント色              |
 | `zinc-600` | `#52525b` | 本文 (bio、About、Privacy ページの説明文) |
-| `zinc-500` | `#71717a` | SNSリンク名、補助リンク (Read More 等) |
-| `zinc-400` | `#a1a1aa` | ラベル、補助情報、メタデータ、フッター |
+| `zinc-500` | `#71717a` | SNSリンク名、補助リンク (Read More 等)    |
+| `zinc-400` | `#a1a1aa` | ラベル、補助情報、メタデータ、フッター    |
 
 ## 3. タイポグラフィ (Typography)
 
@@ -57,35 +57,40 @@
 - **グレインエフェクト (`.bg-grain`)**:
   - `opacity: 0.03` のSVGノイズフィルターを使用。静的な画面に深みを与えます。
 - **選択範囲 (`selection-mono`)**:
-  - `selection:bg-zinc-900 selection:text-white` により、テキスト選択時もブランドイメージを維持。
+  - `selection:bg-textPrimary selection:text-bgPrimary` により、テキスト選択時もブランドイメージを維持。
 
 ## 6. レスポンシブ対応 (Responsive Layout)
 
-| ブレークポイント | 画面幅 | プロフィール配置 |
-| :--- | :--- | :--- |
-| モバイル | ~639px | アバター(上) → 名前/bio(下) の縦並び |
-| タブレット~ | 640px+ (`sm:`) | 名前/bio(左) + アバター(右) の横並び |
+| ブレークポイント | 画面幅         | プロフィール配置                     |
+| :--------------- | :------------- | :----------------------------------- |
+| モバイル         | ~639px         | アバター(上) → 名前/bio(下) の縦並び |
+| タブレット~      | 640px+ (`sm:`) | 名前/bio(左) + アバター(右) の横並び |
 
 - コンテナー幅: トップページ `max-w-lg` / 下層ページ `max-w-2xl`
 - 上下パディング: `py-32 sm:py-48`
 
-## 6. 再利用ガイド (Reuse Guide)
+## 7. 再利用ガイド (Reuse Guide)
 
-### Tailwind Theme ([src/app.css](../src/app.css))
+### UnoCSS Configuration ([uno.config.ts](../uno.config.ts))
 
-他のプロジェクトでこの配色やフォントを再現するには、CSS ファイル内の `@theme` ブロックをコピーして使用してください。
+他のプロジェクトでこの配色やフォントを再現するには、`uno.config.ts` の `theme` ブロックの内容をコピーして使用してください。
 
-```css
-/* app.css での定義例 */
-@theme {
-  --font-sans: 'Noto Sans JP', sans-serif;
-  --font-base: 'Lexend', 'IBM Plex Sans JP', sans-serif;
-
-  --color-bg-primary: #fbfbfb;
-  --color-bg-secondary: #f7f7f7;
-  --color-text-primary: #27272a;
-  --color-text-secondary: #71717a;
-  --color-text-hover: #27272a;
-  --color-border-dim: #f1f1f2;
-}
+```typescript
+// uno.config.ts での定義例
+  theme: {
+    fontFamily: {
+      sans: '"Noto Sans JP", sans-serif',
+      base: '"Lexend", "IBM Plex Sans JP", sans-serif',
+    },
+    colors: {
+      bgPrimary: '#fbfbfb',
+      bgSecondary: '#f7f7f7',
+      textPrimary: '#27272a',
+      textSecondary: '#71717a',
+      textDimmed: '#52525b',
+      textLight: '#a1a1aa',
+      textHover: '#27272a',
+      borderDim: '#f1f1f2',
+    },
+  },
 ```

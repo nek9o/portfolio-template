@@ -1,6 +1,7 @@
 <script lang="ts">
   import LinkItem from "$lib/components/LinkItem.svelte";
   import { config } from "$lib/config";
+  import { getBorderClass } from "$lib/utils/borderClass";
   import { onMount } from "svelte";
   import { fade, fly } from "svelte/transition";
 
@@ -109,7 +110,7 @@
                         href={info.repository}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-[11px] text-zinc-400 hover:text-zinc-800 border-b border-transparent hover:border-zinc-300/80 transition-all truncate"
+                        class="text-[11px] text-zinc-400 hover:text-zinc-800 border-b {getBorderClass(false)} transition-all truncate"
                       >
                         {info.repository}
                       </a>
@@ -122,7 +123,7 @@
                         href={info.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-[11px] text-zinc-400 hover:text-zinc-800 border-b border-transparent hover:border-zinc-300/80 transition-all truncate"
+                        class="text-[11px] text-zinc-400 hover:text-zinc-800 border-b {getBorderClass(false)} transition-all truncate"
                       >
                         {info.url}
                       </a>
