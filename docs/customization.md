@@ -8,12 +8,12 @@
 
 ```typescript
   profile: {
-    nameJp: "名前",                     // 日本語名
-    nameEn: "Your Name",                // 英語名 (OGPやタイトルバーにも使用)
+    nameJp: "山田 太郎",                // 日本語名
+    nameEn: "Taro Yamada",             // 英語名 (OGPやタイトルバーにも使用)
     bio: `自己紹介文。\n改行も使用できます。`, // 自己紹介 (1〜2行程度を推奨)
-    avatar: "/avatar.png",              // アバター画像のパス (staticフォルダ内)
+    avatar: "/avatar.svg",             // アバター画像のパス (staticフォルダ内。PNG/JPG/SVG対応)
     detailedAbout: `詳細な自己紹介テキスト。\n複数行対応しています。`, // 詳細自己紹介ページのコンテンツ
-    showDetailedAbout: true,            // true: /about ページを有効化、false: 非表示
+    showDetailedAbout: true,           // true: /about ページを有効化、false: 非表示
   },
 ```
 
@@ -50,10 +50,13 @@
   seo: {
     themeColor: "#fbfbfb",             // ブラウザのテーマカラー
     siteUrl: "https://your-site.pages.dev/", // デプロイ先のURL
-    ogpImage: "https://your-site.pages.dev/avatar.png", // SNSシェア時の画像URL
+    ogpImage: "https://your-site.pages.dev/ogp.png", // SNSシェア時の画像URL (デプロイ後に実際のURLへ変更すること)
     showAllRightsReserved: true,       // フッターに "All rights reserved" を表示するか
   },
 ```
+
+> [!TIP]
+> `static/ogp.png` にクリエイティブなデフォルト画像を用意しています。ご自身の画像に差し替えてください。
 
 ## デザインの調整
 
