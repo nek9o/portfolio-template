@@ -55,7 +55,12 @@ export function isLicenseAllowed(licenseId: string | undefined | null): boolean 
   if (!licenseId) return false;
 
   try {
-    return (spdxSatisfies as any)(licenseId, ALLOWED_LICENSES);
+    // spdx-satisfies の引数は (spdxExpression, arrayOfLicenses)
+    const satisfies = (spdxSatisfies as unknown) as (
+      expression: string,
+      licenses: string[]
+    ) => boolean;
+    return satisfies(ALLOWED_LICENSES, [licenseId]);
   } catch (e) {
     // SPDX 式として解析できない場合は、念のため完全一致もチェック
     return ALLOWED_LICENSES.includes(licenseId);
@@ -83,7 +88,15 @@ export function loadManualLicenses(filePath: string): LicenseInfo[] {
  * rollup-plugin-license から渡される依存関係リストを JSON 文字列に整形する
  */
 export function formatLicenseData(
-  dependencies: any[],
+  dependencies: {
+    name?: string | null;
+    version?: string | null;
+    license?: string | null;
+    repository?: string | { url: string } | null;
+    author?: { name?: string | null; email?: string | null } | null;
+    homepage?: string | null;
+    licenseText?: string | null;
+  }[],
   manualLicenses: LicenseInfo[]
 ): string {
   const result: Record<string, LicenseInfo> = {};
