@@ -6,6 +6,11 @@ import {
 } from 'unocss';
 
 export default defineConfig({
+  content: {
+    pipeline: {
+      include: [/\.(vue|svelte|[jt]sx|mdx?|html)($|\?)/, 'src/**/*.{js,ts}'],
+    },
+  },
   presets: [presetUno()],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   theme: {
