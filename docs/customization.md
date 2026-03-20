@@ -10,12 +10,24 @@
   profile: {
     nameJp: "名前",                     // 日本語名
     nameEn: "Your Name",                // 英語名 (OGPやタイトルバーにも使用)
-    bio: "あなたの自己紹介文をここに書いてください。", // 自己紹介
+    bio: `自己紹介文。\n改行も使用できます。`, // 自己紹介 (1〜2行程度を推奨)
     avatar: "/avatar.png",              // アバター画像のパス (staticフォルダ内)
+    detailedAbout: `詳細な自己紹介テキスト。\n複数行対応しています。`, // 詳細自己紹介ページのコンテンツ
+    showDetailedAbout: true,            // true: /about ページを有効化、false: 非表示
   },
 ```
 
-## リンク集・プロジェクト一覧の変更
+## 詳細自己紹介ページ (`/about`) の設定
+
+`showDetailedAbout` を `true` にすると、トップページのbioの下に「Read More」リンクが表示され、`/about` ページが有効になります。\
+`false` にすると非表示になり、`/about` へのアクセスはトップページにリダイレクトされます。
+
+```typescript
+  profile: {
+    detailedAbout: `経歴やスキル、趣味など、より詳しい自己紹介をここに書いてください。`,
+    showDetailedAbout: true, // false にすると/aboutページは非表示になりトップページにリダイレクトされます
+  },
+```
 
 同じく `config.ts` 内の `links` 配列および `projects` 配列を編集して、実績や制作物を追加・修正してください。
 

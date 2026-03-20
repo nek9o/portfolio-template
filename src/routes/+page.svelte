@@ -43,31 +43,47 @@
   />
 </svelte:head>
 
-<div class="min-h-screen bg-[var(--bg-primary)] text-zinc-800 selection:bg-zinc-800 selection:text-zinc-50 flex flex-col font-base transition-colors duration-500">
+<div class="min-h-screen bg-(--bg-primary) text-zinc-800 selection:bg-zinc-800 selection:text-zinc-50 flex flex-col font-base transition-colors duration-500">
   {#if isMounted}
     <main
       class="
-        flex-grow
+        grow
         mx-auto
         px-6
         py-32 sm:py-48
-        max-w-md
+        max-w-lg
         w-full
       "
     >
-      <!-- プロフィールセクション -->
       <section
         in:fly={{ y: 10, duration: 800 }}
-        class="flex flex-col items-center text-center mb-24"
+        class="mb-32"
       >
-        <Avatar src={profile.avatar} alt={profile.nameEn} />
+        <div class="flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-12 mb-16">
+          <div class="order-first sm:order-last shrink-0">
+            <Avatar src={profile.avatar} alt={profile.nameEn} class="mb-4 sm:mb-0" />
+          </div>
 
-        <h1 class="text-2xl font-medium tracking-tight mb-4">
-          {profile.nameJp} / {profile.nameEn}
-        </h1>
-        <p class="text-sm text-zinc-500 leading-relaxed max-w-xs mx-auto mb-16">
-          {profile.bio}
-        </p>
+          <div class="flex-1 min-w-0">
+            <h1 class="text-2xl font-medium tracking-tight mb-4">
+              {profile.nameJp} / {profile.nameEn}
+            </h1>
+            <p class="text-sm text-zinc-600 leading-relaxed max-w-xs whitespace-pre-wrap {profile.showDetailedAbout ? 'mb-6' : 'mb-0'}">
+              {profile.bio}
+            </p>
+
+            {#if profile.showDetailedAbout}
+              <div class="mt-6 mb-8">
+                <a
+                  href="/about"
+                  class="text-[10px] uppercase tracking-widest text-zinc-500 hover:text-zinc-800 transition-colors duration-300"
+                >
+                  Read More
+                </a>
+              </div>
+            {/if}
+          </div>
+        </div>
 
         <!-- 極限までミニマルなリンク集 -->
         <div class="w-full space-y-0 text-left">
@@ -80,7 +96,7 @@
       <!-- プロジェクトセクション (完全モノクロ) -->
       <section
         in:fly={{ y: 10, duration: 800, delay: 200 }}
-        class="mt-32 space-y-12"
+        class="mt-48 space-y-12"
       >
         <h2 class="text-[10px] uppercase tracking-[0.3em] text-zinc-400 font-medium">Projects</h2>
 
@@ -101,9 +117,12 @@
         &copy; {new Date().getFullYear()} {profile.nameEn}{seo.showAllRightsReserved ? '. All rights reserved' : ''}
       </div>
 
-      <div class="text-[9px] text-zinc-400">
+      <div class="text-[9px] text-zinc-400 mb-1">
         Fonts: <a href="https://fonts.google.com/specimen/Lexend" target="_blank" class="hover:text-zinc-800 underline underline-offset-2 transition-colors duration-300">Lexend</a> &
-        <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-zinc-800 underline underline-offset-2 transition-colors duration-300">IBM Plex Sans JP</a> |
+        <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-zinc-800 underline underline-offset-2 transition-colors duration-300">IBM Plex Sans JP</a>
+      </div>
+
+      <div class="text-[9px] text-zinc-400">
         <!-- 削除しないでください！削除した場合各OSSのライセンスを違反することになります。 -->
         <!-- Please do not delete this! Doing so will constitute a violation of the respective OSS licenses. -->
         <a href="/licenses" class="hover:text-zinc-800 underline underline-offset-2 transition-colors duration-300">Licenses</a>
