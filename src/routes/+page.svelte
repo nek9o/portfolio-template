@@ -43,11 +43,11 @@
   />
 </svelte:head>
 
-<div class="min-h-screen bg-[var(--bg-primary)] text-zinc-800 selection:bg-zinc-800 selection:text-zinc-50 flex flex-col font-base transition-colors duration-500">
+<div class="min-h-screen bg-(--bg-primary) text-zinc-800 selection:bg-zinc-800 selection:text-zinc-50 flex flex-col font-base transition-colors duration-500">
   {#if isMounted}
     <main
       class="
-        flex-grow
+        grow
         mx-auto
         px-6
         py-32 sm:py-48
@@ -58,16 +58,27 @@
       <!-- プロフィールセクション -->
       <section
         in:fly={{ y: 10, duration: 800 }}
-        class="flex flex-col items-center text-center mb-24"
+        class="flex flex-col items-center text-center mb-32"
       >
         <Avatar src={profile.avatar} alt={profile.nameEn} />
 
         <h1 class="text-2xl font-medium tracking-tight mb-4">
           {profile.nameJp} / {profile.nameEn}
         </h1>
-        <p class="text-sm text-zinc-500 leading-relaxed max-w-xs mx-auto mb-16">
+        <p class="text-sm text-zinc-600 leading-relaxed max-w-xs mx-auto {profile.showDetailedAbout ? 'mb-12' : 'mb-32'}">
           {profile.bio}
         </p>
+
+        {#if profile.showDetailedAbout}
+          <div class="mb-24">
+            <a
+              href="/about"
+              class="text-[10px] uppercase tracking-widest text-zinc-500 hover:text-zinc-800 transition-colors duration-300"
+            >
+              Read More
+            </a>
+          </div>
+        {/if}
 
         <!-- 極限までミニマルなリンク集 -->
         <div class="w-full space-y-0 text-left">
@@ -80,7 +91,7 @@
       <!-- プロジェクトセクション (完全モノクロ) -->
       <section
         in:fly={{ y: 10, duration: 800, delay: 200 }}
-        class="mt-32 space-y-12"
+        class="mt-48 space-y-12"
       >
         <h2 class="text-[10px] uppercase tracking-[0.3em] text-zinc-400 font-medium">Projects</h2>
 
@@ -101,9 +112,12 @@
         &copy; {new Date().getFullYear()} {profile.nameEn}{seo.showAllRightsReserved ? '. All rights reserved' : ''}
       </div>
 
-      <div class="text-[9px] text-zinc-400">
+      <div class="text-[9px] text-zinc-400 mb-1">
         Fonts: <a href="https://fonts.google.com/specimen/Lexend" target="_blank" class="hover:text-zinc-800 underline underline-offset-2 transition-colors duration-300">Lexend</a> &
-        <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-zinc-800 underline underline-offset-2 transition-colors duration-300">IBM Plex Sans JP</a> |
+        <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-zinc-800 underline underline-offset-2 transition-colors duration-300">IBM Plex Sans JP</a>
+      </div>
+
+      <div class="text-[9px] text-zinc-400">
         <!-- 削除しないでください！削除した場合各OSSのライセンスを違反することになります。 -->
         <!-- Please do not delete this! Doing so will constitute a violation of the respective OSS licenses. -->
         <a href="/licenses" class="hover:text-zinc-800 underline underline-offset-2 transition-colors duration-300">Licenses</a>
