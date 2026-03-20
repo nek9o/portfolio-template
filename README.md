@@ -1,7 +1,7 @@
 # Portfolio Template
 
 [![SvelteKit](https://img.shields.io/github/package-json/dependency-version/fal-114514/portfolio-template/dev/@sveltejs/kit/main?label=SvelteKit&color=FF3E00&style=flat)](https://kit.svelte.dev/)
-[![Tailwind CSS](https://img.shields.io/github/package-json/dependency-version/fal-114514/portfolio-template/dev/tailwindcss/main?label=Tailwind_CSS&color=38B2AC&style=flat)](https://tailwindcss.com/)
+[![UnoCSS](https://img.shields.io/github/package-json/dependency-version/fal-114514/portfolio-template/dev/unocss/main?label=UnoCSS&color=333333&style=flat)](https://unocss.dev/)
 [![TypeScript](https://img.shields.io/github/package-json/dependency-version/fal-114514/portfolio-template/dev/typescript/main?label=TypeScript&color=3178C6&style=flat)](https://www.typescriptlang.org/)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/fal-114514/portfolio-template/build.yml?branch=main&label=build&style=flat)](https://github.com/fal-114514/portfolio-template/actions)
 [![CodeFactor](https://img.shields.io/codefactor/grade/github/fal-114514/portfolio-template?label=codefactor&style=flat)](https://www.codefactor.io/repository/github/fal-114514/portfolio-template)
