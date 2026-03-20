@@ -12,9 +12,9 @@
   rel={external ? "noopener noreferrer" : undefined}
   class="
     group relative
-    inline-flex items-center
+    flex items-center justify-between
     -mx-4 px-4
-    {border ? 'py-4 border-b border-zinc-200/50 hover:border-zinc-300/80 w-full justify-between' : ''}
+    {border ? 'py-4 border-b border-zinc-200/50 hover:border-zinc-300/80' : ''}
     text-sm text-zinc-500 hover:text-zinc-800
     transition-colors duration-300
     whitespace-nowrap
