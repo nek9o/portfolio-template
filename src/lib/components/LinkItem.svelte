@@ -14,6 +14,7 @@
   href={url}
   target={external ? "_blank" : undefined}
   rel={external ? "noopener noreferrer" : undefined}
+  aria-label={external ? `${label} (新しいタブで開く)` : label}
   class="
     group relative
     flex items-center justify-between
