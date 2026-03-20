@@ -19,7 +19,7 @@
 >
   <div class="relative transform group-hover:translate-x-1 transition-transform duration-300 will-change-transform">
     <!-- インジケーター -->
-    <div class="absolute -left-4 top-0.5 bottom-0.5 w-[2px] bg-zinc-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+    <div class="absolute -left-4 top-0.5 bottom-0.5 w-0.5 bg-zinc-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
 
     <div class="flex items-center justify-between">
       <span class="text-sm font-medium tracking-tight text-zinc-600 group-hover:text-zinc-800 transition-colors">

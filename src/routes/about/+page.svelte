@@ -1,19 +1,23 @@
 <script lang="ts">
-  import LinkItem from "$lib/components/LinkItem.svelte";
   import { config } from "$lib/config";
+  import LinkItem from "$lib/components/LinkItem.svelte";
   import { onMount } from "svelte";
   import { fade, fly } from "svelte/transition";
+  import { goto } from "$app/navigation";
 
   let isMounted = false;
-  const { profile, privacyPolicy } = config;
+  const { profile, seo } = config;
 
   onMount(() => {
     isMounted = true;
+    if (!profile.showDetailedAbout) {
+      goto("/");
+    }
   });
 </script>
 
 <svelte:head>
-  <title>Privacy Policy | {profile.nameEn}</title>
+  <title>About | {profile.nameEn}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
@@ -24,7 +28,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-(--bg-primary) text-zinc-800 selection:bg-zinc-800 selection:text-zinc-50 flex flex-col font-base transition-colors duration-500">
-  {#if isMounted}
+  {#if isMounted && profile.showDetailedAbout}
     <main
       class="
         grow
@@ -41,27 +45,20 @@
         class="mb-32 flex items-center justify-between"
       >
         <h1 class="text-2xl font-medium tracking-tight">
-          Privacy Policy
+          About
         </h1>
         <LinkItem label="Back" url="/" external={false} border={false} reverse={true} />
       </header>
 
-      <!-- コンテンツ -->
-      <div
+      <!-- 詳細紹介セクション -->
+      <section
         in:fly={{ y: 10, duration: 800, delay: 200 }}
-        class="space-y-24"
+        class="space-y-8"
       >
-        {#each privacyPolicy.items as item}
-          <section class="border-b border-zinc-100 pb-12 last:border-0">
-            <h2 class="text-sm font-medium text-zinc-800 mb-4">
-              {item.title}
-            </h2>
-            <p class="text-sm text-zinc-600 leading-relaxed whitespace-pre-wrap">
-              {item.description}
-            </p>
-          </section>
-        {/each}
-      </div>
+        <p class="text-sm text-zinc-600 leading-relaxed whitespace-pre-wrap">
+          {profile.detailedAbout}
+        </p>
+      </section>
     </main>
 
     <!-- フッター -->
@@ -70,7 +67,7 @@
       class="pb-16 text-center"
     >
       <div class="text-[9px] uppercase tracking-[0.2em] text-zinc-400">
-        &copy; {new Date().getFullYear()} {profile.nameEn}{config.seo.showAllRightsReserved ? '. All rights reserved' : ''}
+        &copy; {new Date().getFullYear()} {profile.nameEn}{seo.showAllRightsReserved ? '. All rights reserved' : ''}
       </div>
     </footer>
   {/if}
