@@ -24,7 +24,7 @@
     <!-- インジケーター -->
     <div
       class="
-        absolute top-0.5 bottom-0.5 w-[2px] bg-zinc-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+        absolute top-0.5 bottom-0.5 w-0.5 bg-zinc-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300
         {reverse ? '-right-4' : '-left-4'}
         pointer-events-none
       "

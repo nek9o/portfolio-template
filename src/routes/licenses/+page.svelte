@@ -45,11 +45,11 @@
   />
 </svelte:head>
 
-<div class="min-h-screen bg-[var(--bg-primary)] text-zinc-800 selection:bg-zinc-800 selection:text-zinc-50 flex flex-col font-base">
+<div class="min-h-screen bg-(--bg-primary) text-zinc-800 selection:bg-zinc-800 selection:text-zinc-50 flex flex-col font-base">
   {#if isMounted}
     <main
       class="
-        flex-grow
+        grow
         mx-auto
         px-6
         py-32 sm:py-48
@@ -60,7 +60,7 @@
       <!-- ヘッダー -->
       <header
         in:fly={{ y: 10, duration: 800 }}
-        class="mb-24 flex items-center justify-between"
+        class="mb-32 flex items-center justify-between"
       >
         <h1 class="text-2xl font-medium tracking-tight">
           Licenses
@@ -76,7 +76,7 @@
       {:else}
         <div
           in:fly={{ y: 10, duration: 800, delay: 200 }}
-          class="space-y-16"
+          class="space-y-24"
         >
           {#each Object.entries(licenses) as [name, info]}
             <section class="border-b border-zinc-100 pb-12 last:border-0">
