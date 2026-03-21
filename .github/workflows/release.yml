@@ -1,0 +1,68 @@
+name: Auto Release (CalVer)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Release作成やコミットpushに必要
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # プロジェクトのバージョンに合わせてください
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Generate Version (CalVer)
+        id: calver
+        run: |
+          # タイムゾーンを日本時間(JST)にして日付を取得
+          TZ=Asia/Tokyo DATE=$(date +'%Y.%m.%d')
+          # 1日に複数回実行されても被らないように GitHub Actions の run_number を付与
+          VERSION="${DATE}.${{ github.run_number }}"
+          echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+          echo "Generated version: ${VERSION}"
+
+      - name: Configure Git
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+      - name: Update package.json version & Commit
+        run: |
+          # package.json のバージョンを更新 (git tag はここでは作成しない)
+          npm version ${{ steps.calver.outputs.VERSION }} --no-git-tag-version
+
+          # 変更をコミットしてpush。[skip ci] をつけることで無限ループを防ぐ
+          git commit -a -m "chore(release): bump version to ${{ steps.calver.outputs.VERSION }} [skip ci]" || echo "No changes to commit"
+          git push
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Create Zip file
+        run: |
+          # node_modules や .git など不要なディレクトリを除外してプロジェクトのソースコード全体を ZIP 化
+          zip -r "project-${{ steps.calver.outputs.VERSION }}.zip" . -x "*.git*" "node_modules/*" ".github/*"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.calver.outputs.VERSION }}
+          name: Release ${{ steps.calver.outputs.VERSION }}
+          files: project-${{ steps.calver.outputs.VERSION }}.zip
+          generate_release_notes: true
