@@ -76,7 +76,14 @@ jobs:
       - name: Create Zip file
         run: |
           # node_modules や .git など不要なディレクトリを除外してプロジェクトのソースコード全体を ZIP 化
-          zip -r "project-${{ steps.calver.outputs.VERSION }}.zip" . -x "*.git*" "node_modules/*" ".github/*"
+          zip -r "project-${{ steps.calver.outputs.VERSION }}.zip" . \
+            -x "*.git*" \
+            -x "node_modules/*" \
+            -x ".github/*" \
+            -x ".wrangler/*" \
+            -x ".svelte-kit/*" \
+            -x "build/*" \
+            -x ".DS_Store"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
