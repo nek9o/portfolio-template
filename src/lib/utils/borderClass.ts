@@ -9,6 +9,6 @@
  */
 export function getBorderClass(showAlways: boolean): string {
   return showAlways
-    ? 'border-borderDim hover:border-textSecondary/50' /* true */
-    : 'border-transparent hover:border-textSecondary/50'; /* false */
+    ? 'border-borderDim hover:border-textSecondary/60' /* true */
+    : 'border-transparent hover:border-textSecondary/60'; /* false */
 }
