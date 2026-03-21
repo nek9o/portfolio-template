@@ -4,8 +4,7 @@
   import ProjectCard from "$lib/components/ProjectCard.svelte";
   import { config } from "$lib/config";
 
-  import { getBorderClass } from "$lib/utils/borderClass";
-  const { profile, links, projects, seo, privacyPolicy } = config;
+    const { profile, links, projects, seo, privacyPolicy } = config;
 </script>
 
 <svelte:head>
@@ -58,7 +57,7 @@
           <h1 class="text-2xl font-medium mb-4">
             {profile.nameJp} / {profile.nameEn}
           </h1>
-          <p class="text-sm text-textDimmed leading-relaxed max-w-xs whitespace-pre-wrap mb-6">
+          <p class="text-sm text-textBio leading-relaxed max-w-xs whitespace-pre-wrap mb-6">
             {profile.bio}
           </p>
 
@@ -103,15 +102,15 @@
     </div>
 
     <div class="text-[9px] text-textLight">
-      Fonts: <a href="https://fonts.google.com/specimen/Lexend" target="_blank" class="hover:text-textPrimary border-b {getBorderClass(false)} transition-all duration-300">Lexend</a> &
-      <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-textPrimary border-b {getBorderClass(false)} transition-all duration-300">IBM Plex Sans JP</a>
+      Fonts: <a href="https://fonts.google.com/specimen/Lexend" target="_blank" class="hover:text-textPrimary transition-all duration-300">Lexend</a> &
+      <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-textPrimary transition-all duration-300">IBM Plex Sans JP</a>
       <!-- 削除しないでください！削除した場合各OSSのライセンスを違反することになります。 -->
       <!-- Please do not delete this! Doing so will constitute a violation of the respective OSS licenses. -->
-      | <a href="/licenses" class="hover:text-textPrimary border-b {getBorderClass(false)} transition-all duration-300">Licenses</a>
+      | <a href="/licenses" class="hover:text-textPrimary transition-all duration-300">Licenses</a>
       {#if privacyPolicy?.enabled}
         | <a
             href="/privacy"
-            class="hover:text-textPrimary border-b {getBorderClass(false)} transition-all duration-300"
+            class="hover:text-textPrimary transition-all duration-300"
           >
             Privacy Policy
           </a>
