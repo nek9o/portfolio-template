@@ -30,10 +30,10 @@ jobs:
       - name: Generate Version (CalVer)
         id: calver
         run: |
-          # タイムゾーンを日本時間(JST)にして日付を取得
-          TZ=Asia/Tokyo DATE=$(date +'%Y.%m.%d')
-          # 1日に複数回実行されても被らないように GitHub Actions の run_number を付与
-          VERSION="${DATE}.${{ github.run_number }}"
+          # タイムゾーンを日本時間(JST)にして日付を取得（先頭の0を取り除く形式）
+          TZ=Asia/Tokyo DATE=$(date +'%Y.%-m.%-d')
+          # SemVer（X.Y.Z形式）に合わせるため、複数回実行用のrun_numberをプレリリース番号として付与
+          VERSION="${DATE}-${{ github.run_number }}"
           echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
           echo "Generated version: ${VERSION}"
 
