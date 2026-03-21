@@ -2,15 +2,15 @@
 
 :root {
   /* 英字 → Lexend / 日本語 → IBM Plex Sans JP の順で適用 */
-  --font-base: "Lexend", "IBM Plex Sans JP", sans-serif;
+  --font-base: 'Lexend', 'IBM Plex Sans JP', sans-serif;
 
-  /* カラーパレット (完全な白黒を避ける) */
-  --bg-primary: #fbfbfb;
-  --bg-secondary: #f7f7f7;
-  --text-primary: #27272a;
-  --text-secondary: #71717a;
-  --text-hover: #27272a;
-  --border: #f1f1f2;
+  /* カラーパレット (uno.config.ts の定義を参照) */
+  --bg-primary: theme('colors.bgPrimary');
+  --bg-secondary: theme('colors.bgSecondary');
+  --text-primary: theme('colors.textPrimary');
+  --text-secondary: theme('colors.textSecondary');
+  --text-hover: theme('colors.textHover');
+  --border: theme('colors.borderDim');
 }
 
 html {
@@ -27,13 +27,14 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   font-weight: 300;
+  letter-spacing: 0.01em;
 }
 
 /* タイポグラフィ調整 */
 h1,
 h2,
 h3 {
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   font-weight: 500;
 }
 
@@ -53,7 +54,7 @@ h3 {
   left: 0;
   width: 100vw;
   height: 100vh;
-  content: "";
+  content: '';
   opacity: 0.03; /* 非常に薄くかけるのがポイント */
   pointer-events: none;
   z-index: 50;

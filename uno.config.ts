@@ -1,3 +1,4 @@
+import { theme } from '@unocss/preset-mini';
 import {
   defineConfig,
   presetUno,
@@ -19,15 +20,15 @@ export default defineConfig({
       base: '"Lexend", "IBM Plex Sans JP", sans-serif',
     },
     colors: {
-      bgPrimary: '#fbfbfb',
-      bgSecondary: '#f7f7f7',
-      textPrimary: '#27272a',
-      textSecondary: '#71717a',
-      textDimmed: '#52525b',
-      textLight: '#a1a1aa',
-      textHover: '#27272a',
-      borderDim: '#f1f1f2',
-      bgSelection: '#18181b',
+      bgPrimary: theme.colors.zinc[50], // メイン背景色 (Body背景など)
+      bgSecondary: theme.colors.zinc[100], // サブ背景色
+      textPrimary: theme.colors.zinc[800], // メイン文字色 (見出し、本文など)
+      textSecondary: theme.colors.zinc[500], // サブ文字色 (リンク、メタ情報など)
+      textDimmed: theme.colors.zinc[600], // やや薄い文字色 (自己紹介文など)
+      textLight: theme.colors.zinc[400], // 極薄い文字色 (ラベル、フッターなど)
+      textHover: theme.colors.zinc[800], // ホバー時の文字色
+      borderDim: theme.colors.zinc[200], // 控えめなボーダー色
+      bgSelection: theme.colors.zinc[900], // テキスト選択時の背景色
     },
   },
 });

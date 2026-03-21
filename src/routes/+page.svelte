@@ -55,7 +55,7 @@
         </div>
 
         <div class="flex-1 min-w-0">
-          <h1 class="text-2xl font-medium tracking-tight mb-4">
+          <h1 class="text-2xl font-medium mb-4">
             {profile.nameJp} / {profile.nameEn}
           </h1>
           <p class="text-sm text-textDimmed leading-relaxed max-w-xs whitespace-pre-wrap mb-6">

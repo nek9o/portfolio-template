@@ -2,6 +2,7 @@
  * サイトの全体設定を一元管理するファイルです。
  * すべてのカスタマイズをこのファイルで行うことができます。
  */
+import { theme } from '@unocss/preset-mini';
 
 export const config = {
   // ---------------------------------------------------------
@@ -52,7 +53,7 @@ export const config = {
   // 4. SEO & OGP (メタデータ設定)
   // ---------------------------------------------------------
   seo: {
-    themeColor: '#fbfbfb', // ブラウザのテーマカラー
+    themeColor: theme.colors.zinc[50], // ブラウザのテーマカラー
     siteUrl: 'https://your-site.pages.dev/', // デプロイ先のURL
     ogpImage: 'https://your-site.pages.dev/ogp.png', // SNSシェア時の画像URL (デプロイ後に実際のURLへ変更してください)
     githubRepo: 'https://github.com/your-username/your-repo', // GitHubリポジトリのURL
