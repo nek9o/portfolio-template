@@ -31,7 +31,8 @@ jobs:
         id: calver
         run: |
           # タイムゾーンを日本時間(JST)にして日付を取得（先頭の0を取り除く形式）
-          TZ=Asia/Tokyo DATE=$(date +'%Y.%-m.%-d')
+          # TZの指定を`date`コマンドの実行時に正しく反映させるように修正
+          DATE=$(TZ=Asia/Tokyo date +'%Y.%-m.%-d')
           # SemVer（X.Y.Z形式）に合わせるため、複数回実行用のrun_numberをプレリリース番号として付与
           VERSION="${DATE}-${{ github.run_number }}"
           echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
