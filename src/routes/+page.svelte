@@ -27,12 +27,7 @@
   <meta property="twitter:description" content="{profile.nameJp} ({profile.nameEn}) のポートフォリオサイトです。プロジェクトや活動内容を紹介しています。" />
   <meta property="twitter:image" content={seo.ogpImage} />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500&family=Lexend:wght@300;400;500&display=swap"
-    rel="stylesheet"
-  />
+
 </svelte:head>
 
 <div class="min-h-screen bg-bgPrimary text-textPrimary selection:bg-textPrimary selection:text-bgPrimary flex flex-col font-base transition-colors duration-500">
@@ -102,8 +97,7 @@
     </div>
 
     <div class="text-[9px] text-textLight">
-      Fonts: <a href="https://fonts.google.com/specimen/Lexend" target="_blank" class="hover:text-textPrimary transition-all duration-300">Lexend</a> &
-      <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-textPrimary transition-all duration-300">IBM Plex Sans JP</a>
+      Font: <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-textPrimary transition-all duration-300">IBM Plex Sans JP</a>
       <!-- 削除しないでください！削除した場合各OSSのライセンスを違反することになります。 -->
       <!-- Please do not delete this! Doing so will constitute a violation of the respective OSS licenses. -->
       | <a href="/licenses" class="hover:text-textPrimary transition-all duration-300">Licenses</a>
@@ -122,8 +116,8 @@
 
 <style>
   :global(body) {
-    font-family: "Lexend", "IBM Plex Sans JP", sans-serif;
-    font-weight: 300;
+    font-family: "IBM Plex Sans JP", sans-serif;
+    font-weight: 400;
   }
 
   /* SSRに対応したCSSアニメーション。isMountedを使わずスムーズなフェードインを実現する */

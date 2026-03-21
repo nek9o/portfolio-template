@@ -1,7 +1,7 @@
 {
   "name": "portfolio-template",
   "private": true,
-  "version": "4.0.0",
+  "version": "2026.03.22.1",
   "type": "module",
   "engines": {
     "node": ">=18.0.0"
@@ -34,6 +34,7 @@
     "wrangler": "^4.75.0"
   },
   "dependencies": {
+    "@fontsource/ibm-plex-sans-jp": "^5.2.8",
     "@iarna/toml": "^2.2.5"
   }
 }
