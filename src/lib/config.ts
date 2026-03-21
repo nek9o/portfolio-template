@@ -36,13 +36,15 @@ export const config = {
   projects: [
     {
       name: 'Portfolio Template',
-      description: 'SvelteKit + UnoCSS で作られた、ミニマルなポートフォリオテンプレートです。',
+      description:
+        'SvelteKit + UnoCSS で作られた、ミニマルなポートフォリオテンプレートです。',
       url: 'https://github.com/your_account/your_repo',
       language: 'SvelteKit',
     },
     {
       name: 'My Project',
-      description: 'プロジェクトの説明をここに書いてください。簡潔かつ具体的に記述することをおすすめします。',
+      description:
+        'プロジェクトの説明をここに書いてください。簡潔かつ具体的に記述することをおすすめします。',
       url: 'https://example.com/project2',
       language: 'TypeScript',
     },
