@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500&family=Lexend:wght@300;400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500&display=swap"
     rel="stylesheet"
   />
 </svelte:head>
@@ -60,8 +60,8 @@
 
 <style>
   :global(body) {
-    font-family: "Lexend", "IBM Plex Sans JP", sans-serif;
-    font-weight: 300;
+    font-family: "IBM Plex Sans JP", sans-serif;
+    font-weight: 400;
   }
 
   @keyframes fadeUp {
