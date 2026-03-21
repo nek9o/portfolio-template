@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # Release作成やコミットpushに必要
+      deployments: write
 
     steps:
       - name: Checkout code
