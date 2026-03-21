@@ -1,8 +1,7 @@
 /* Tailwind v4 directives removed */
 
 :root {
-  /* 英字 → Lexend / 日本語 → IBM Plex Sans JP の順で適用 */
-  --font-base: 'Lexend', 'IBM Plex Sans JP', sans-serif;
+  --font-base: 'IBM Plex Sans JP', sans-serif;
 
   /* カラーパレット (uno.config.ts の定義を参照) */
   --bg-primary: theme('colors.bgPrimary');
@@ -26,7 +25,7 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.01em;
 }
 
