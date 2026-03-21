@@ -27,12 +27,7 @@
   <meta property="twitter:description" content="{profile.nameJp} ({profile.nameEn}) のポートフォリオサイトです。プロジェクトや活動内容を紹介しています。" />
   <meta property="twitter:image" content={seo.ogpImage} />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
+
 </svelte:head>
 
 <div class="min-h-screen bg-bgPrimary text-textPrimary selection:bg-textPrimary selection:text-bgPrimary flex flex-col font-base transition-colors duration-500">
