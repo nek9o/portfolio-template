@@ -32,10 +32,13 @@ jobs:
         id: calver
         run: |
           # タイムゾーンを日本時間(JST)にして日付を取得（先頭の0を取り除く形式）
-          # TZの指定を`date`コマンドの実行時に正しく反映させるように修正
           DATE=$(TZ=Asia/Tokyo date +'%Y.%-m.%-d')
-          # SemVer（X.Y.Z形式）に合わせるため、複数回実行用のrun_numberをプレリリース番号として付与
-          VERSION="${DATE}-${{ github.run_number }}"
+          # その日付で始まる既存タグを取得し、当日の連番を算出する
+          git fetch --tags --quiet
+          # 例: "2026.3.24-1", "2026.3.24-2" のようなタグをカウント
+          COUNT=$(git tag --list "${DATE}-*" | wc -l | tr -d '[:space:]')
+          SEQUENCE=$((COUNT + 1))
+          VERSION="${DATE}-${SEQUENCE}"
           echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
           echo "Generated version: ${VERSION}"
 
