@@ -17,10 +17,10 @@
     flex flex-col space-y-1.5
     -mx-4 px-4
     py-6 border-b {getBorderClass(border)}
-    transition-all duration-200
+    transition-all duration-200 ease-in-out
   "
 >
-  <div class="indicator-container relative transform transition-transform duration-300 will-change-transform">
+  <div class="indicator-container relative transform transition-transform duration-300 ease-in-out will-change-transform">
     <!-- インジケーター -->
     <div class="indicator-line absolute -left-4 top-0.5 bottom-0.5 w-0.5 bg-textPrimary opacity-0 transition-opacity duration-300 pointer-events-none"></div>
 
