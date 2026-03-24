@@ -47,7 +47,7 @@
   /* UnoCSS handles @apply without @reference */
 
 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     /* ホバーに対応したデバイス（PCなど）でのみ、インジケーター表示とスライドを有効化 */
     .group:hover .indicator-container:not(.reverse) {
       transform: translateX(0.25rem);
@@ -59,9 +59,9 @@
       opacity: 1;
     }
 
-    /* 文字色のホバーもマウス時のみに限定 */
+    /* 文字色とボーダーのホバーもマウス時のみに限定 */
     .group:hover {
-      @apply text-textPrimary;
+      @apply text-textPrimary border-textSecondary/60;
     }
   }
 </style>
