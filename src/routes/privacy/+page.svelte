@@ -77,10 +77,12 @@
 
   .anim-fade-up {
     animation: fadeUp 0.8s ease both;
+    will-change: transform, opacity;
   }
 
   .anim-fade {
     animation: fadeIn 1s ease both;
+    will-change: opacity;
   }
 
   .anim-delay-200 {
