@@ -21,19 +21,19 @@
     -mx-4 px-4
     py-4 {effectiveNoBorder ? '' : `border-b ${getBorderClass(border)}`}
     text-sm text-textSecondary
-    transition-all duration-200
+    transition-all duration-200 ease-in-out
     whitespace-nowrap
   "
 >
   <div
-    class="indicator-container relative transform transition-transform duration-300 will-change-transform"
+    class="indicator-container relative transform transition-transform duration-300 ease-in-out will-change-transform"
     class:reverse
   >
     <!-- インジケーター -->
     <div
       class="
         indicator-line
-        absolute top-0.5 bottom-0.5 w-0.5 bg-textPrimary opacity-0 transition-opacity duration-300
+        absolute top-0.5 bottom-0.5 w-0.5 bg-textPrimary opacity-0 transition-opacity duration-300 ease-in-out
         {reverse ? '-right-4' : '-left-4'}
         pointer-events-none
       "
