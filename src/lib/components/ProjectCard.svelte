@@ -40,7 +40,7 @@
   /* UnoCSS handles @apply without @reference */
 
 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     /* マウスホバー時のみスライドとインジケーター表示を有効化 */
     .group:hover .indicator-container {
       transform: translateX(0.25rem);
@@ -49,7 +49,10 @@
       opacity: 1;
     }
 
-    /* テキストカラーの変更もホバー時のみ */
+    /* テキストカラーなどの変更もホバー時のみ */
+    .group:hover {
+      @apply border-textSecondary/60;
+    }
     .group:hover .project-name {
       @apply text-textPrimary;
     }
