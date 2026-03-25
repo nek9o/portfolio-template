@@ -50,7 +50,7 @@
 
 | ファイル | 役割 |
 |---|---|
-| `static/avatar.svg` | アバターのデフォルト画像。ご自身の画像(PNG/JPG/SVG)に置き換えてください。ファイル名を変えた場合は `config.ts` の `avatar` パスも合わせて変更してください。 |
+| `static/avatar.svg` | アバターのデフォルト画像。ご自身の画像(PNG/JPG/SVG)に置き換えてください。ビルド時に画質を保ちつつ自動で圧縮されます。ファイル名を変えた場合は `config.ts` の `avatar` パスも合わせて変更してください。 |
 | `static/ogp.png` | SNSシェア時に表示されるOGP画像のデフォルト。ご自身の画像に差し替え、`config.ts` の `ogpImage` にデプロイ先の絶対URLを設定してください。 |
 | `static/favicon.svg` | ブラウザのタブに表示されるファビコン。 |
 | `static/licenses.json` | ビルド時に自動生成されるOSSライセンス一覧。手動編集は不要です。 |
