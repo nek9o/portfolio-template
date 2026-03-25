@@ -3,6 +3,7 @@ import path from 'path';
 import license from 'rollup-plugin-license';
 import UnoCSS from 'unocss/vite';
 import { defineConfig } from 'vite';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import {
   formatLicenseData,
   isLicenseAllowed,
@@ -34,5 +35,10 @@ const licensePlugin = license({
 });
 
 export default defineConfig({
-  plugins: [UnoCSS(), sveltekit(), licensePlugin],
+  plugins: [
+    UnoCSS(),
+    sveltekit(),
+    ViteImageOptimizer(),
+    licensePlugin,
+  ],
 });

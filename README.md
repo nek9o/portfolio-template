@@ -58,7 +58,7 @@
 1. `npm install`
 2. `src/lib/config.ts` を開き、自分のプロフィール情報やプロジェクトを設定
 3. `npm run dev` で確認
-4. `static/avatar.svg` を自分のアバター画像に置き換えます (PNG/JPG/SVGに対応)
+4. `static/avatar.svg` を自分のアバター画像に置き換えます（PNG/JPG/SVGに対応。ビルド時に自動で圧縮・最適化されます）。
 5. `static/ogp.png` をSNSシェア用の画像に差し替え、`config.ts` の `ogpImage` にデプロイ先の絶対URLを設定してください
 6. (任意) `showDetailedAbout: true` にすると、詳細自己紹介ページ (`/about`) が有効になります
 
