@@ -1,6 +1,6 @@
 <script lang="ts">
   import { config } from "$lib/config";
-  import LinkItem from "$lib/components/LinkItem.svelte";
+  import BackButton from "$lib/components/BackButton.svelte";
   import { onMount } from "svelte";
   import { fade, fly } from "svelte/transition";
   import { goto } from "$app/navigation";
@@ -42,7 +42,7 @@
         <h1 class="text-2xl font-medium tracking-tight">
           About
         </h1>
-        <LinkItem label="Back" url="/" external={false} border={false} reverse={true} />
+        <BackButton />
       </header>
 
       <!-- 詳細紹介セクション -->
