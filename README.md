@@ -1,10 +1,10 @@
 # Portfolio Template
 
-[![SvelteKit](https://img.shields.io/github/package-json/dependency-version/fal-114514/portfolio-template/dev/@sveltejs/kit/main?label=SvelteKit&color=FF3E00&style=flat)](https://kit.svelte.dev/)
-[![UnoCSS](https://img.shields.io/github/package-json/dependency-version/fal-114514/portfolio-template/dev/unocss/main?label=UnoCSS&color=333333&style=flat)](https://unocss.dev/)
-[![TypeScript](https://img.shields.io/github/package-json/dependency-version/fal-114514/portfolio-template/dev/typescript/main?label=TypeScript&color=3178C6&style=flat)](https://www.typescriptlang.org/)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/fal-114514/portfolio-template/build.yml?branch=main&label=build&style=flat)](https://github.com/fal-114514/portfolio-template/actions)
-[![CodeFactor](https://img.shields.io/codefactor/grade/github/fal-114514/portfolio-template?label=codefactor&style=flat)](https://www.codefactor.io/repository/github/fal-114514/portfolio-template)
+[![SvelteKit](https://img.shields.io/github/package-json/dependency-version/nek9o/portfolio-template/dev/@sveltejs/kit/main?label=SvelteKit&color=FF3E00&style=flat)](https://kit.svelte.dev/)
+[![UnoCSS](https://img.shields.io/github/package-json/dependency-version/nek9o/portfolio-template/dev/unocss/main?label=UnoCSS&color=333333&style=flat)](https://unocss.dev/)
+[![TypeScript](https://img.shields.io/github/package-json/dependency-version/nek9o/portfolio-template/dev/typescript/main?label=TypeScript&color=3178C6&style=flat)](https://www.typescriptlang.org/)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/nek9o/portfolio-template/build.yml?branch=main&label=build&style=flat)](https://github.com/nek9o/portfolio-template/actions)
+[![CodeFactor](https://img.shields.io/codefactor/grade/github/nek9o/portfolio-template?label=codefactor&style=flat)](https://www.codefactor.io/repository/github/nek9o/portfolio-template)
 [![License](https://img.shields.io/badge/License-Blue_Oak-blue?style=flat)](./LICENSE.md)
 
 「余白で魅せるポートフォリオ」を最短で作れる、ミニマル特化のSvelteKitテンプレートです。\
@@ -84,7 +84,7 @@
 
 ## フィードバック・サポート
 
-不具合の報告や機能のご提案、使い方の質問などは [GitHub Issues](https://github.com/fal-114514/portfolio-template/issues) で受け付けています。
+不具合の報告や機能のご提案、使い方の質問などは [GitHub Issues](https://github.com/nek9o/portfolio-template/issues) で受け付けています。
 
 - **バグ報告:** 動作の不備や表示の崩れなど
 - **質問・相談:** セットアップ手順や基本的な使い方について

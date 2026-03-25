@@ -13,7 +13,7 @@
    本テンプレートをクローンまたはダウンロードし、プロジェクトディレクトリに移動します。
 
    ```bash
-   git clone https://github.com/fal-114514/portfolio-template.git
+   git clone https://github.com/nek9o/portfolio-template.git
    cd ./portfolio-template
    ```
 
