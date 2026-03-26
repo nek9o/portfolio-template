@@ -4,8 +4,10 @@
   export let url: string;
   export let external = true;
   export let border = true;
-  /** trueのとき区切り線をホバー時含め完全に非表示 */
-  export let noBorder = false;
+  export let reverse = false;
+  /** 未指定時はreverse(Backボタン判定)を継承。trueのとき区切り線をホバー時含め完全に非表示 */
+  export let noBorder: boolean | undefined = undefined;
+  $: effectiveNoBorder = noBorder ?? reverse;
 </script>
 
 <a
@@ -17,7 +19,7 @@
     group relative
     flex items-center justify-between
     -mx-4 px-4
-    py-4 {noBorder ? '' : `border-b ${getBorderClass(border)}`}
+    py-4 {effectiveNoBorder ? '' : `border-b ${getBorderClass(border)}`}
     text-sm text-textSecondary
     transition-all duration-200 ease-in-out
     whitespace-nowrap
@@ -25,12 +27,14 @@
 >
   <div
     class="indicator-container relative transform transition-transform duration-300 ease-in-out will-change-transform"
+    class:reverse
   >
     <!-- インジケーター -->
     <div
       class="
         indicator-line
-        absolute top-0.3 bottom-0.3 w-0.5 -left-4 bg-textPrimary opacity-0 transition-opacity duration-300 ease-in-out
+        absolute top-0.5 bottom-0.5 w-0.5 bg-textPrimary opacity-0 transition-opacity duration-300 ease-in-out
+        {reverse ? '-right-4' : '-left-4'}
         pointer-events-none
       "
     ></div>
@@ -42,10 +46,14 @@
 <style>
   /* UnoCSS handles @apply without @reference */
 
+
   @media (hover: hover) and (pointer: fine) {
-    /* ホバーに対応したデバイス(PCなど)でのみ、インジケーター表示とスライドを有効化 */
-    .group:hover .indicator-container {
+    /* ホバーに対応したデバイス（PCなど）でのみ、インジケーター表示とスライドを有効化 */
+    .group:hover .indicator-container:not(.reverse) {
       transform: translateX(0.25rem);
+    }
+    .group:hover .indicator-container.reverse {
+      transform: translateX(-0.25rem);
     }
     .group:hover .indicator-line {
       opacity: 1;
