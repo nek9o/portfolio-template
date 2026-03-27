@@ -26,19 +26,9 @@
   "
 >
   <div
-    class="indicator-container relative transform transition-transform duration-300 ease-in-out will-change-transform"
+    class="indicator-container relative transform transition-transform duration-500 cubic-bezier-[0.16,1,0.3,1] will-change-transform"
     class:reverse
   >
-    <!-- インジケーター -->
-    <div
-      class="
-        indicator-line
-        absolute top-1/2 -translate-y-1/2 w-1 h-1 bg-textPrimary opacity-0 transition-opacity duration-300 ease-in-out
-        {reverse ? '-right-4' : '-left-4'}
-        pointer-events-none
-      "
-    ></div>
-
     <span class="inline-block tracking-wide">{label}</span>
   </div>
 </a>
@@ -48,15 +38,12 @@
 
 
   @media (hover: hover) and (pointer: fine) {
-    /* ホバーに対応したデバイス（PCなど）でのみ、インジケーター表示とスライドを有効化 */
+    /* ホバーに対応したデバイス（PCなど）でのみスライドを有効化 */
     .group:hover .indicator-container:not(.reverse) {
-      transform: translateX(0.25rem);
+      transform: translateX(0.5rem);
     }
     .group:hover .indicator-container.reverse {
-      transform: translateX(-0.25rem);
-    }
-    .group:hover .indicator-line {
-      opacity: 1;
+      transform: translateX(-0.5rem);
     }
 
     /* 文字色とボーダーのホバーもマウス時のみに限定 */
