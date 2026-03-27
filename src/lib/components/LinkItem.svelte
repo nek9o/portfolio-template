@@ -4,10 +4,8 @@
   export let url: string;
   export let external = true;
   export let border = true;
-  export let reverse = false;
-  /** 未指定時はreverse(Backボタン判定)を継承。trueのとき区切り線をホバー時含め完全に非表示 */
-  export let noBorder: boolean | undefined = undefined;
-  $: effectiveNoBorder = noBorder ?? reverse;
+  /** trueのとき区切り線をホバー時含め完全に非表示 */
+  export let noBorder = false;
 </script>
 
 <a
@@ -19,7 +17,7 @@
     group relative
     flex items-center justify-between
     -mx-4 px-4
-    py-4 {effectiveNoBorder ? '' : `border-b ${getBorderClass(border)}`}
+    py-4 {noBorder ? '' : `border-b ${getBorderClass(border)}`}
     text-sm text-textSecondary
     transition-all duration-200 ease-in-out
     whitespace-nowrap
@@ -35,7 +33,6 @@
 
 <style>
   /* UnoCSS handles @apply without @reference */
-
 
   @media (hover: hover) and (pointer: fine) {
     /* ホバーに対応したデバイス（PCなど）でのみスライドを有効化 */
