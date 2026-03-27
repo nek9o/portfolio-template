@@ -1,13 +1,26 @@
 <script lang="ts">
   import { getBorderClass } from '$lib/utils/borderClass';
-  export let label: string;
-  export let url: string;
-  export let external = true;
-  export let border = true;
-  export let reverse = false;
-  /** 未指定時はreverse(Backボタン判定)を継承。trueのとき区切り線をホバー時含め完全に非表示 */
-  export let noBorder: boolean | undefined = undefined;
-  $: effectiveNoBorder = noBorder ?? reverse;
+
+  interface Props {
+    label: string;
+    url: string;
+    external?: boolean;
+    border?: boolean;
+    reverse?: boolean;
+    /** 未指定時はreverse(Backボタン判定)を継承。trueのとき区切り線をホバー時含め完全に非表示 */
+    noBorder?: boolean | undefined;
+  }
+
+  let {
+    label,
+    url,
+    external = true,
+    border = true,
+    reverse = false,
+    noBorder = undefined
+  }: Props = $props();
+
+  const effectiveNoBorder = $derived(noBorder ?? reverse);
 </script>
 
 <a
@@ -27,7 +40,7 @@
 >
   <div
     class="indicator-container relative transform transition-transform duration-300 cubic-bezier-[0.16,1,0.3,1] will-change-transform"
-    class:reverse
+    class:reverse={reverse}
   >
     <span class="inline-block tracking-wide">{label}</span>
   </div>
