@@ -1,11 +1,26 @@
 <script lang="ts">
   import { getBorderClass } from '$lib/utils/borderClass';
-  export let label: string;
-  export let url: string;
-  export let external = true;
-  export let border = true;
-  /** trueのとき区切り線をホバー時含め完全に非表示 */
-  export let noBorder = false;
+
+  interface Props {
+    label: string;
+    url: string;
+    external?: boolean;
+    border?: boolean;
+    reverse?: boolean;
+    /** 未指定時はreverse(Backボタン判定)を継承。trueのとき区切り線をホバー時含め完全に非表示 */
+    noBorder?: boolean | undefined;
+  }
+
+  let {
+    label,
+    url,
+    external = true,
+    border = true,
+    reverse = false,
+    noBorder = undefined
+  }: Props = $props();
+
+  const effectiveNoBorder = $derived(noBorder ?? reverse);
 </script>
 
 <a
@@ -24,17 +39,9 @@
   "
 >
   <div
-    class="indicator-container relative transform transition-transform duration-300 ease-in-out will-change-transform"
+    class="indicator-container relative transform transition-transform duration-300 cubic-bezier-[0.16,1,0.3,1] will-change-transform"
+    class:reverse={reverse}
   >
-    <!-- インジケーター -->
-    <div
-      class="
-        indicator-line
-        absolute top-0.3 bottom-0.3 w-0.5 -left-4 bg-textPrimary opacity-0 transition-opacity duration-300 ease-in-out
-        pointer-events-none
-      "
-    ></div>
-
     <span class="inline-block tracking-wide">{label}</span>
   </div>
 </a>
@@ -43,12 +50,12 @@
   /* UnoCSS handles @apply without @reference */
 
   @media (hover: hover) and (pointer: fine) {
-    /* ホバーに対応したデバイス(PCなど)でのみ、インジケーター表示とスライドを有効化 */
-    .group:hover .indicator-container {
-      transform: translateX(0.25rem);
+    /* ホバーに対応したデバイス（PCなど）でのみスライドを有効化 */
+    .group:hover .indicator-container:not(.reverse) {
+      transform: translateX(0.3rem);
     }
-    .group:hover .indicator-line {
-      opacity: 1;
+    .group:hover .indicator-container.reverse {
+      transform: translateX(-0.3rem);
     }
 
     /* 文字色とボーダーのホバーもマウス時のみに限定 */
