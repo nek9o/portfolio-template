@@ -1,5 +1,5 @@
 <script lang="ts">
-  import LinkItem from "$lib/components/LinkItem.svelte";
+  import BackButton from "$lib/components/BackButton.svelte";
   import { config } from "$lib/config";
 
   const { profile, privacyPolicy } = config;
@@ -27,7 +27,7 @@
       <h1 class="text-2xl font-medium tracking-tight">
         Privacy Policy
       </h1>
-      <LinkItem label="Back" url="/" external={false} border={false} reverse={true} />
+      <BackButton />
     </header>
 
     <!-- コンテンツ -->

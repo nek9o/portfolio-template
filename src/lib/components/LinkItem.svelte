@@ -32,7 +32,7 @@
     group relative
     flex items-center justify-between
     -mx-4 px-4
-    py-4 {effectiveNoBorder ? '' : `border-b ${getBorderClass(border)}`}
+    py-4 {noBorder ? '' : `border-b ${getBorderClass(border)}`}
     text-sm text-textSecondary
     transition-all duration-200 ease-in-out
     whitespace-nowrap
@@ -48,7 +48,6 @@
 
 <style>
   /* UnoCSS handles @apply without @reference */
-
 
   @media (hover: hover) and (pointer: fine) {
     /* ホバーに対応したデバイス（PCなど）でのみスライドを有効化 */
