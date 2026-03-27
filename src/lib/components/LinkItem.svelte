@@ -33,7 +33,7 @@
     <div
       class="
         indicator-line
-        absolute top-0.5 bottom-0.5 w-0.5 bg-textPrimary opacity-0 transition-opacity duration-300 ease-in-out
+        absolute top-1/2 -translate-y-1/2 w-1 h-1 bg-textPrimary opacity-0 transition-opacity duration-300 ease-in-out
         {reverse ? '-right-4' : '-left-4'}
         pointer-events-none
       "
