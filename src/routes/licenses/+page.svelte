@@ -1,5 +1,5 @@
 <script lang="ts">
-  import LinkItem from "$lib/components/LinkItem.svelte";
+  import BackButton from "$lib/components/BackButton.svelte";
   import { config } from "$lib/config";
   import { getBorderClass } from "$lib/utils/borderClass";
   import { onMount } from "svelte";
@@ -61,7 +61,7 @@
         <h1 class="text-2xl font-medium tracking-tight">
           Licenses
         </h1>
-        <LinkItem label="Back" url="/" external={false} border={false} reverse={true} />
+        <BackButton />
       </header>
 
       <!-- ライセンスリスト -->
