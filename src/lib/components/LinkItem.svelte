@@ -26,7 +26,7 @@
   "
 >
   <div
-    class="indicator-container relative transform transition-transform duration-500 cubic-bezier-[0.16,1,0.3,1] will-change-transform"
+    class="indicator-container relative transform transition-transform duration-300 cubic-bezier-[0.16,1,0.3,1] will-change-transform"
     class:reverse
   >
     <span class="inline-block tracking-wide">{label}</span>
@@ -40,10 +40,10 @@
   @media (hover: hover) and (pointer: fine) {
     /* ホバーに対応したデバイス（PCなど）でのみスライドを有効化 */
     .group:hover .indicator-container:not(.reverse) {
-      transform: translateX(0.5rem);
+      transform: translateX(0.3rem);
     }
     .group:hover .indicator-container.reverse {
-      transform: translateX(-0.5rem);
+      transform: translateX(-0.3rem);
     }
 
     /* 文字色とボーダーのホバーもマウス時のみに限定 */
