@@ -20,7 +20,7 @@
     transition-all duration-200 ease-in-out
   "
 >
-  <div class="indicator-container relative transform transition-transform duration-500 cubic-bezier-[0.16,1,0.3,1] will-change-transform">
+  <div class="indicator-container relative transform transition-transform duration-300 cubic-bezier-[0.16,1,0.3,1] will-change-transform">
     <div class="flex items-center justify-between">
       <span class="project-name text-sm font-medium tracking-wide text-textDimmed transition-colors">
         {name}
@@ -40,7 +40,7 @@
   @media (hover: hover) and (pointer: fine) {
     /* マウスホバー時のみスライドを有効化 */
     .group:hover .indicator-container {
-      transform: translateX(0.5rem);
+      transform: translateX(0.3rem);
     }
     /* テキストカラーなどの変更もホバー時のみ */
     .group:hover {
