@@ -22,7 +22,7 @@
 >
   <div class="indicator-container relative transform transition-transform duration-300 ease-in-out will-change-transform">
     <!-- インジケーター -->
-    <div class="indicator-line absolute -left-4 top-0.5 bottom-0.5 w-0.5 bg-textPrimary opacity-0 transition-opacity duration-300 pointer-events-none"></div>
+    <div class="indicator-line absolute -left-4 top-1/2 -translate-y-1/2 w-1 h-1 bg-textPrimary opacity-0 transition-opacity duration-300 pointer-events-none"></div>
 
     <div class="flex items-center justify-between">
       <span class="project-name text-sm font-medium tracking-wide text-textDimmed transition-colors">
