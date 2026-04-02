@@ -4,7 +4,7 @@
   import ProjectCard from "$lib/components/ProjectCard.svelte";
   import { config } from "$lib/config";
 
-    const { profile, links, projects, seo, privacyPolicy } = config;
+    const { profile, links, projects, seo, privacyPolicy, settings } = config;
 </script>
 
 <svelte:head>
@@ -69,25 +69,29 @@
     </section>
 
     <!-- 極限までミニマルなリンク集 -->
-    <section class="mt-32 anim-fade-up">
-      <div class="w-full space-y-0 text-left">
-        <h2 class="text-[10px] uppercase tracking-[0.3em] text-textLight font-medium mb-8">Links</h2>
-        {#each links as link, i (link.url)}
-          <LinkItem label={link.label} url={link.url} border={i < links.length - 1} />
-        {/each}
-      </div>
-    </section>
+    {#if settings?.showLinks !== false}
+      <section class="mt-32 anim-fade-up">
+        <div class="w-full space-y-0 text-left">
+          <h2 class="text-[10px] uppercase tracking-[0.3em] text-textLight font-medium mb-8">Links</h2>
+          {#each links as link, i (link.url)}
+            <LinkItem label={link.label} url={link.url} border={i < links.length - 1} />
+          {/each}
+        </div>
+      </section>
+    {/if}
 
     <!-- プロジェクトセクション (完全モノクロ) -->
-    <section class="mt-32 anim-fade-up anim-delay-200">
-      <h2 class="text-[10px] uppercase tracking-[0.3em] text-textLight font-medium mb-6">Projects</h2>
+    {#if settings?.showProjects !== false}
+      <section class="mt-32 anim-fade-up anim-delay-200">
+        <h2 class="text-[10px] uppercase tracking-[0.3em] text-textLight font-medium mb-6">Projects</h2>
 
-      <div class="space-y-0">
-        {#each projects as project, i (project.url)}
-          <ProjectCard {...project} border={i < projects.length - 1} />
-        {/each}
-      </div>
-    </section>
+        <div class="space-y-0">
+          {#each projects as project, i (project.url)}
+            <ProjectCard {...project} border={i < projects.length - 1} />
+          {/each}
+        </div>
+      </section>
+    {/if}
   </main>
 
   <!-- フッター -->
