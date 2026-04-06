@@ -1,7 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import license from 'rollup-plugin-license';
 import UnoCSS from 'unocss/vite';
-import { defineConfig } from 'vite';
+import { defineConfig, type ConfigEnv, type UserConfig } from 'vite';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import {
   formatLicenseData,
@@ -41,7 +41,7 @@ export default defineConfig({
     // クライアントビルド時のみライセンス情報を抽出する
     {
       ...licensePlugin,
-      apply(config, env: any) {
+      apply(config: UserConfig, env: ConfigEnv & { ssrBuild?: boolean; isSsrBuild?: boolean }) {
         return env.command === 'build' && !env.ssrBuild && !env.isSsrBuild;
       },
     },
@@ -49,7 +49,7 @@ export default defineConfig({
     // アセットとして licenses.json を出力するプラグイン
     {
       name: 'emit-licenses-json',
-      apply(config, env: any) {
+      apply(config: UserConfig, env: ConfigEnv & { ssrBuild?: boolean; isSsrBuild?: boolean }) {
         return env.command === 'build' && !env.ssrBuild && !env.isSsrBuild;
       },
       // rollup-plugin-license による抽出が終わった後のフックで出力
