@@ -120,10 +120,10 @@ name = "Portfolio Template"
 version = "2026.4.7-3"
 licenseId = "BlueOak-1.0.0"
 repository = "https://github.com/nek9o/portfolio-template"
-publisher = "kkn3"
+publisher = "nek9o"
 email = ""
-url = "https://kkn3.booth.pm/"
-licenseText = """Copyright (c) 2026 kkn3
+url = ""
+licenseText = """Copyright (c) 2026 nek9o
 
 # Blue Oak Model License
 
