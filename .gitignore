@@ -1,5 +1,5 @@
-node_modules/*
-backup.git/*
+node_modules/
+backup.git/
 backup-template/
 mailmap.txt
 
