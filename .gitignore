@@ -1,6 +1,6 @@
 node_modules/*
 backup.git/*
-backup-template/*
+backup-template/
 mailmap.txt
 
 # Output
