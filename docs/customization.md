@@ -81,6 +81,14 @@
   },
 ```
 
+## Cloudflare Web Analytics の設定
+
+本テンプレートは Cloudflare Web Analytics の組み込みをサポートしています。
+トークンをコードに直書きせず、環境変数として注入することでソースコードをセキュアに保ちます。
+
+1. **ローカル環境での確認**: プロジェクトルートにある `.env.example` をコピーして `.env` を作成し、`PUBLIC_CF_WEB_ANALYTICS_TOKEN=あなたのトークン` を設定します。（`.env` は Gitから除外されています）
+2. **本番環境 (Cloudflare Pages) での設定**: Cloudflareダッシュボードで対象プロジェクトを開き、**「Settings (設定)」>「Environment variables (環境変数)」** にて `PUBLIC_CF_WEB_ANALYTICS_TOKEN` という名前でトークンを設定・保存後、再デプロイします。
+
 ## 手動管理ライセンスの追加
 
 npmパッケージ以外(Google FontsやCDN経由のライブラリなど)を使用している場合は、`src/lib/licenses.manual.toml`にライセンス情報を手動で追記してください。\
