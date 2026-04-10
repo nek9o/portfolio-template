@@ -3,7 +3,7 @@
 [![SvelteKit](https://img.shields.io/github/package-json/dependency-version/nek9o/portfolio-template/dev/@sveltejs/kit/main?label=SvelteKit&color=FF3E00&style=flat)](https://kit.svelte.dev/)
 [![UnoCSS](https://img.shields.io/github/package-json/dependency-version/nek9o/portfolio-template/dev/unocss/main?label=UnoCSS&color=333333&style=flat)](https://unocss.dev/)
 [![TypeScript](https://img.shields.io/github/package-json/dependency-version/nek9o/portfolio-template/dev/typescript/main?label=TypeScript&color=3178C6&style=flat)](https://www.typescriptlang.org/)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/nek9o/portfolio-template/build.yml?branch=main&label=build&style=flat)](https://github.com/nek9o/portfolio-template/actions)
+[![Release Status](https://img.shields.io/github/actions/workflow/status/nek9o/portfolio-template/release.yml?branch=main&label=release%20%26%20deploy&style=flat)](https://github.com/nek9o/portfolio-template/actions)
 [![CodeFactor](https://img.shields.io/codefactor/grade/github/nek9o/portfolio-template?label=codefactor&style=flat)](https://www.codefactor.io/repository/github/nek9o/portfolio-template)
 [![License](https://img.shields.io/badge/License-Blue_Oak-blue?style=flat)](./LICENSE.md)
 
@@ -79,6 +79,20 @@
 3. `PUBLIC_CF_WEB_ANALYTICS_TOKEN` という名前で、あなたのトークンの値を設定します。
 4. 設定を保存後、次回のビルド・デプロイ時から自動的にアナリティクス用のスクリプトタグがページに埋め込まれるようになります。
 
+**【GitHub Actions 等の CI 環境でビルドしてデプロイする場合】**
+
+Cloudflare Pages のダッシュボード設定は、GitHub Actions などの外部 CI ツール上でのビルドプロセスには引き継がれません。
+GitHub Actions 上でビルド（`npm run build`）を行う場合は、リポジトリの Secrets を利用して環境変数を渡す必要があります。
+
+1. GitHub の対象リポジトリで **「Settings」>「Secrets and variables」>「Actions」** に移動します。
+2. **「New repository secret」** をクリックし、名前に `PUBLIC_CF_WEB_ANALYTICS_TOKEN`、値にあなたのトークンを設定します。
+3. ワークフローファイル (`.github/workflows/xxx.yml` など) のビルドステップに以下のように `env` を追記して、Secrets から値を注入するようにしてください。
+   ```yaml
+   - name: Build
+     run: npm run build
+     env:
+       PUBLIC_CF_WEB_ANALYTICS_TOKEN: ${{ secrets.PUBLIC_CF_WEB_ANALYTICS_TOKEN }}
+   ```
 ## 注意事項
 
 - **商用利用が可能**です (制作代行や自社サイト等でお使いいただけます) 。
