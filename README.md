@@ -3,7 +3,7 @@
 [![SvelteKit](https://img.shields.io/github/package-json/dependency-version/nek9o/portfolio-template/dev/@sveltejs/kit/main?label=SvelteKit&color=FF3E00&style=flat)](https://kit.svelte.dev/)
 [![UnoCSS](https://img.shields.io/github/package-json/dependency-version/nek9o/portfolio-template/dev/unocss/main?label=UnoCSS&color=333333&style=flat)](https://unocss.dev/)
 [![TypeScript](https://img.shields.io/github/package-json/dependency-version/nek9o/portfolio-template/dev/typescript/main?label=TypeScript&color=3178C6&style=flat)](https://www.typescriptlang.org/)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/nek9o/portfolio-template/build.yml?branch=main&label=build&style=flat)](https://github.com/nek9o/portfolio-template/actions)
+[![Release Status](https://img.shields.io/github/actions/workflow/status/nek9o/portfolio-template/release.yml?branch=main&label=release%20%26%20deploy&style=flat)](https://github.com/nek9o/portfolio-template/actions)
 [![CodeFactor](https://img.shields.io/codefactor/grade/github/nek9o/portfolio-template?label=codefactor&style=flat)](https://www.codefactor.io/repository/github/nek9o/portfolio-template)
 [![License](https://img.shields.io/badge/License-Blue_Oak-blue?style=flat)](./LICENSE.md)
 
@@ -77,7 +77,6 @@
 1. Cloudflareダッシュボードにログインし、デプロイ先のPagesプロジェクトを開きます。
 2. **「Settings (設定)」>「Environment variables (環境変数)」** に移動します。
 3. `PUBLIC_CF_WEB_ANALYTICS_TOKEN` という名前で、あなたのトークンの値を設定します。
-4. 設定を保存後、次回のビルド・デプロイ時から自動的にアナリティクス用のスクリプトタグがページに埋め込まれるようになります。
 
 ## 注意事項
 
