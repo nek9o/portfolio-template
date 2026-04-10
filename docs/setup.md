@@ -23,7 +23,11 @@
    npm install
    ```
 
-3. **開発サーバーの起動**
+3. **環境変数の設定 (任意)**\
+   プロジェクトルートにある `.env.example` をコピーまたはリネームして `.env` ファイルを作成します。\
+   Cloudflare Web Analytics などを使用する場合は、このファイルにトークンを記述します（詳細は[カスタマイズガイド](./customization.md)参照）。
+
+4. **開発サーバーの起動**
    ```bash
    npm run dev
    ```
@@ -38,9 +42,9 @@
    ```
 
 2. **デプロイ**
-   ビルドが成功すると、`build` ディレクトリ(アダプターの設定による)に静的ファイルが生成されます。\
-   Vercel, Cloudflare Pages, Netlify などのプラットフォームにデプロイ可能です。\
-   デフォルトでは `@sveltejs/adapter-auto` が使用されています。
+   ビルドが成功すると、`build` ディレクトリに完全な静的ファイル (SSG) が生成されます。\
+   Cloudflare Pages, Vercel, Netlify などのプラットフォームにそのままデプロイ可能です。\
+   デフォルトでは `@sveltejs/adapter-static` が使用されており、軽量かつ高速に動作します。
 
 ## 補足
 
