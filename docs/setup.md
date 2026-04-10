@@ -50,6 +50,22 @@
    > Cloudflare Pages をご利用の場合は、Cloudflare ダッシュボード上で GitHub リポジトリを連携させるだけで、ソースコード変更時に **自動的にビルド・デプロイが行われる標準機能** が利用できます。\
    > 本テンプレートではこの標準の自動デプロイ機能を利用することを推奨しているため、デプロイ用の GitHub Actions ワークフローファイルは含めていません。
 
+### Cloudflare Pages でビルドエラーが発生する場合
+
+デプロイ時に `Error: Output directory ".svelte-kit/cloudflare" not found` というエラーが発生することがあります。\
+これは Cloudflare 側の「Framework preset」設定と、本テンプレートで使用している `adapter-static` の出力先が一致していないことが原因です。
+
+**解決策1: Cloudflare 側の設定を変更する (推奨・静的サイトを維持)**
+Cloudflare ダッシュボードの対象プロジェクトから **[Settings]** > **[Build & deployments]** > **[Build configuration]** を開き、以下の通り変更してください。
+- **Framework preset**: `None` (または `SvelteKit` 以外を選択)
+- **Build output directory**: `build`
+
+**解決策2: アダプターを Cloudflare 専用に変更する (SSR/Functions を利用する場合)**
+Cloudflare の機能 (Workers 等) をフル活用したい場合は、プロジェクトのアダプターを切り替えます。
+1. `@sveltejs/adapter-static` を削除し、`@sveltejs/adapter-cloudflare` をインストールします。
+2. `svelte.config.js` の `import` と `adapter()` 設定を書き換えます（`fallback` オプションは削除してください）。
+
+
 ## 補足
 
 - **ライセンス情報の生成**: 開発サーバー起動時 (`npm run dev`) またはビルド時 (`npm run build`) に、`static/licenses.json` が自動的に作成・更新されます。
