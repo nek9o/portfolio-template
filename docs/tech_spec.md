@@ -13,7 +13,15 @@
 
 > [!TIP]
 > アイコンや CDN 経由のライブラリを使用する場合は [`src/lib/licenses.manual.toml`](../src/lib/licenses.manual.toml) に追加してください。\
-> ビルドプロセスにおいて、`rollup-plugin-license` と自作スクリプト (`scripts/licenses-script.ts`) が連携し、npm パッケージと手動管理分の両方を統合した `static/licenses.json` を生成します。
+> ビルドプロセスにおいて、`rollup-plugin-license` と `vite.config.ts` (Vite のネイティブ `emitFile` API) が連携し、npm パッケージと手動管理分を安定して統合した `licenses.json` をバンドル内に生成します。
+
+## アーキテクチャとインフラ
+
+- **環境変数の動的注入**: Cloudflare Web Analytics のトークンなど、公開すべきでない、あるいは環境ごとに異なる設定値に関してコードへの直書きを廃止し、SvelteKit の `$env/dynamic/public` 経由による動的注入を採用しています。
+- **CI/CD の関心分離 (GitHub Actions)**: ワークフローは役割ごとに分割・整理されています。
+  - `build.yml`: Pull Request 時の継続的インテグレーション（コード検証とビルドチェック用）
+  - `release.yml`: 開発用のバージョン採番（CalVer）、配布用パッケージ (ZIP) の生成用
+  - `deploy.yml`: テンプレート利用者が本番環境へ純粋にデプロイするため（あるいはCloudflareへの自動デプロイが不要な場合）の雛形設計
 
 ## 使用 AI モデル
 
