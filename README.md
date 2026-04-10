@@ -77,22 +77,7 @@
 1. Cloudflareダッシュボードにログインし、デプロイ先のPagesプロジェクトを開きます。
 2. **「Settings (設定)」>「Environment variables (環境変数)」** に移動します。
 3. `PUBLIC_CF_WEB_ANALYTICS_TOKEN` という名前で、あなたのトークンの値を設定します。
-4. 設定を保存後、次回のビルド・デプロイ時から自動的にアナリティクス用のスクリプトタグがページに埋め込まれるようになります。
 
-**【GitHub Actions 等の CI 環境でビルドしてデプロイする場合】**
-
-Cloudflare Pages のダッシュボード設定は、GitHub Actions などの外部 CI ツール上でのビルドプロセスには引き継がれません。
-GitHub Actions 上でビルド（`npm run build`）を行う場合は、リポジトリの Secrets を利用して環境変数を渡す必要があります。
-
-1. GitHub の対象リポジトリで **「Settings」>「Secrets and variables」>「Actions」** に移動します。
-2. **「New repository secret」** をクリックし、名前に `PUBLIC_CF_WEB_ANALYTICS_TOKEN`、値にあなたのトークンを設定します。
-3. ワークフローファイル (`.github/workflows/xxx.yml` など) のビルドステップに以下のように `env` を追記して、Secrets から値を注入するようにしてください。
-   ```yaml
-   - name: Build
-     run: npm run build
-     env:
-       PUBLIC_CF_WEB_ANALYTICS_TOKEN: ${{ secrets.PUBLIC_CF_WEB_ANALYTICS_TOKEN }}
-   ```
 ## 注意事項
 
 - **商用利用が可能**です (制作代行や自社サイト等でお使いいただけます) 。

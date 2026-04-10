@@ -88,7 +88,6 @@
 
 1. **ローカル環境での確認**: プロジェクトルートにある `.env.example` をコピーして `.env` を作成し、`PUBLIC_CF_WEB_ANALYTICS_TOKEN=あなたのトークン` を設定します。（`.env` は Gitから除外されています）
 2. **本番環境 (Cloudflare Pages) での設定**: Cloudflareダッシュボードで対象プロジェクトを開き、**「Settings (設定)」>「Environment variables (環境変数)」** にて `PUBLIC_CF_WEB_ANALYTICS_TOKEN` という名前でトークンを設定・保存後、再デプロイします。
-3. **GitHub Actions 経由のデプロイの場合**: GitHubリポジトリの Secrets にトークンを登録し、`.github/workflows/deploy.yml` などのビルドステップにて `env` 経由で注入します（該当箇所のコメントアウトを解除してください）。
 
 ## 手動管理ライセンスの追加
 
