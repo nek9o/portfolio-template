@@ -61,6 +61,24 @@
 5. `static/ogp.png` をSNSシェア用の画像に差し替え、`config.ts` の `ogpImage` にデプロイ先の絶対URLを設定してください
 6. (任意) `showDetailedAbout: true` にすると、詳細自己紹介ページ (`/about`) が有効になります
 
+## Cloudflare Web Analytics の設定
+
+本テンプレートは Cloudflare Web Analytics の組み込みをサポートしています。
+トークンをコードに直書きせず、環境変数として注入することで、ソースコードをクリーンに保つことができます。
+
+**【ローカル環境での確認】**
+
+1. プロジェクトルートにある `.env.example` をコピーして `.env` ファイルを作成します。
+   （`.env` は `.gitignore` に登録されているため、Gitには含まれません）
+2. `.env` ファイル内に `PUBLIC_CF_WEB_ANALYTICS_TOKEN` を設定すると、ローカル環境（`npm run dev`等）でも動作確認ができます。
+
+**【本番環境 (Cloudflare Pages) での設定】**
+
+1. Cloudflareダッシュボードにログインし、デプロイ先のPagesプロジェクトを開きます。
+2. **「Settings (設定)」>「Environment variables (環境変数)」** に移動します。
+3. `PUBLIC_CF_WEB_ANALYTICS_TOKEN` という名前で、あなたのトークンの値を設定します。
+4. 設定を保存後、次回のビルド・デプロイ時から自動的にアナリティクス用のスクリプトタグがページに埋め込まれるようになります。
+
 ## 注意事項
 
 - **商用利用が可能**です (制作代行や自社サイト等でお使いいただけます) 。
