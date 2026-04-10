@@ -46,6 +46,10 @@
    Cloudflare Pages, Vercel, Netlify などのプラットフォームにそのままデプロイ可能です。\
    デフォルトでは `@sveltejs/adapter-static` が使用されており、軽量かつ高速に動作します。
 
+   > [!NOTE]
+   > Cloudflare Pages をご利用の場合は、Cloudflare ダッシュボード上で GitHub リポジトリを連携させるだけで、ソースコード変更時に **自動的にビルド・デプロイが行われる標準機能** が利用できます。\
+   > そのため、`.github/workflows/deploy.yml` などの CI (GitHub Actions) を使ったデプロイ設定は、任意（オプション）となります。
+
 ## 補足
 
 - **ライセンス情報の生成**: 開発サーバー起動時 (`npm run dev`) またはビルド時 (`npm run build`) に、`static/licenses.json` が自動的に作成・更新されます。
