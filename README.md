@@ -5,7 +5,7 @@
 [![TypeScript](https://img.shields.io/github/package-json/dependency-version/nek9o/portfolio-template/dev/typescript/main?label=TypeScript&color=3178C6&style=flat)](https://www.typescriptlang.org/)
 [![Release Status](https://img.shields.io/github/actions/workflow/status/nek9o/portfolio-template/release.yml?branch=main&label=release%20%26%20deploy&style=flat)](https://github.com/nek9o/portfolio-template/actions)
 [![CodeFactor](https://img.shields.io/codefactor/grade/github/nek9o/portfolio-template?label=codefactor&style=flat)](https://www.codefactor.io/repository/github/nek9o/portfolio-template)
-[![License](https://img.shields.io/badge/License-Blue_Oak-blue?style=flat)](./LICENSE.md)
+[![License](https://img.shields.io/badge/License-0BSD-blue?style=flat)](./LICENSE.md)
 
 「余白で魅せるポートフォリオ」を最短で作れる、ミニマル特化のSvelteKitテンプレートです。\
 本テンプレートは、設定ファイル `src/lib/config.ts` を編集するだけで、すべてのカスタマイズが完結するミニマルなポートフォリオテンプレートです。
@@ -88,12 +88,12 @@
 
 ## ライセンス
 
-本テンプレートは [Blue Oak Model License 1.0.0](./LICENSE.md) に準拠します。
+本テンプレートは [0BSD (Zero-Clause BSD License)](./LICENSE.md) に準拠します。
 
 ### ライセンスの概要
 
 - **自由な利用:** 私用・商用を問わず、自由に利用・改変・配布いただけます。
-- **再配布時の条件:** 本テンプレートを再配布（他人に譲渡・公開）する場合は、このライセンス全文または [公式URL](https://blueoakcouncil.org/license/1.0.0) へのリンクを含める必要があります。
+- **再配布時の条件:** 著作権表示および本許諾表示を維持する義務（再配布時のテキスト同梱など）が**免除**されている、非常にパブリックドメインに近いライセンスです。
 - **免責事項:** 本テンプレートは「現状のまま（AS-IS）」提供され、制作者はいかなる損害についても法令の範囲内で責任を負いません。
 
 詳細な条項については [LICENSE.md](./LICENSE.md) をご確認ください。
