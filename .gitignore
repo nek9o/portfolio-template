@@ -43,3 +43,4 @@ dist/
 .cache/
 
 replace.py
+full_history.txt
