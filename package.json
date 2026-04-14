@@ -1,6 +1,7 @@
 {
   "name": "portfolio-template",
   "private": true,
+  "license": "0BSD",
   "version": "2026.4.11-3",
   "type": "module",
   "engines": {
