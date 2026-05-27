@@ -92,6 +92,13 @@ jobs:
             -x "build/*" \
             -x ".DS_Store"
 
+      - name: Push version bump
+        run: |
+          # 変更（licenses.manual.toml, package.json, package-lock.json）をコミットしてpush
+          # [skip ci] をつけることで Cloudflare 側の自動ビルド（もし有効でも）をスキップさせます
+          git commit -a -m "chore(release): bump version to ${{ steps.calver.outputs.VERSION }} [skip ci]" || echo "No changes to commit"
+          git push
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
@@ -99,11 +106,3 @@ jobs:
           name: Release ${{ steps.calver.outputs.VERSION }}
           files: project-${{ steps.calver.outputs.VERSION }}.zip
           generate_release_notes: true
-
-      - name: Push version bump
-        if: success()
-        run: |
-          # 変更（licenses.manual.toml, package.json, package-lock.json）をコミットしてpush
-          # [skip ci] をつけることで Cloudflare 側の自動ビルド（もし有効でも）をスキップさせます
-          git commit -a -m "chore(release): bump version to ${{ steps.calver.outputs.VERSION }} [skip ci]" || echo "No changes to commit"
-          git push
