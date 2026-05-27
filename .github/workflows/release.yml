@@ -64,6 +64,13 @@ jobs:
           # package.json のバージョンを更新 (git tag はここでは作成しない)
           npm version ${{ steps.calver.outputs.VERSION }} --no-git-tag-version
 
+      - name: Push version bump
+        run: |
+          # 変更（licenses.manual.toml, package.json, package-lock.json）をコミットしてpush
+          # [skip ci] をつけることで Cloudflare 側の自動ビルド（もし有効でも）をスキップさせます
+          git commit -a -m "chore(release): bump version to ${{ steps.calver.outputs.VERSION }} [skip ci]" || echo "No changes to commit"
+          git push
+
       - name: Build Project
         run: npm run build
         # Cloudflare Web Analytics のトークンを注入してビルドする場合
@@ -91,13 +98,6 @@ jobs:
             -x ".svelte-kit/*" \
             -x "build/*" \
             -x ".DS_Store"
-
-      - name: Push version bump
-        run: |
-          # 変更（licenses.manual.toml, package.json, package-lock.json）をコミットしてpush
-          # [skip ci] をつけることで Cloudflare 側の自動ビルド（もし有効でも）をスキップさせます
-          git commit -a -m "chore(release): bump version to ${{ steps.calver.outputs.VERSION }} [skip ci]" || echo "No changes to commit"
-          git push
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
