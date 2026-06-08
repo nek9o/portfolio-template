@@ -2,7 +2,7 @@
   "name": "portfolio-template",
   "private": true,
   "license": "0BSD",
-  "version": "2026.5.27-2",
+  "version": "2026.6.8-1",
   "type": "module",
   "engines": {
     "node": ">=20.19.0"
