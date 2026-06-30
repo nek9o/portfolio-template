@@ -101,7 +101,7 @@
     </div>
 
     <div class="text-[9px] text-textLight">
-      Font: <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-textPrimary transition-all duration-300">IBM Plex Sans JP</a>
+      Font: <a href="https://vercel.com/font" target="_blank" class="hover:text-textPrimary transition-all duration-300">Geist</a>, <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-textPrimary transition-all duration-300">IBM Plex Sans JP</a>
       <!-- 削除しないでください！削除した場合各OSSのライセンスを違反することになります。 -->
       <!-- Please do not delete this! Doing so will constitute a violation of the respective OSS licenses. -->
       | <a href="/licenses" class="hover:text-textPrimary transition-all duration-300">Licenses</a>

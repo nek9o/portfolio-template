@@ -75,7 +75,7 @@
           class="space-y-24"
         >
           {#each Object.entries(licenses) as [name, info]}
-            <section class="border-b border-zinc-100 pb-12 last:border-0">
+            <section class="border-b border-zinc-200 pb-12 last:border-0">
               <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-4">
                 <h2 class="text-sm font-medium text-zinc-800">
                   {getBaseName(name)}
@@ -132,7 +132,7 @@
                   <summary class="text-[10px] uppercase tracking-widest text-zinc-400 hover:text-zinc-800 cursor-pointer list-none transition-colors">
                     View License
                   </summary>
-                  <div class="mt-6 p-6 bg-zinc-50 border border-zinc-100/50 rounded overflow-x-auto">
+                  <div class="mt-6 p-6 bg-zinc-50 border border-zinc-200 rounded overflow-x-auto">
                     <pre class="text-[10px] leading-relaxed text-zinc-500 font-mono whitespace-pre-wrap">{info.licenseText}</pre>
                   </div>
                 </details>
@@ -148,8 +148,11 @@
       in:fade={{ duration: 1000, delay: 600 }}
       class="pb-16 text-center"
     >
-      <div class="text-[9px] uppercase tracking-[0.2em] text-zinc-400">
+      <div class="text-[9px] uppercase tracking-[0.2em] text-zinc-400 mb-2">
         &copy; {new Date().getFullYear()} {config.profile.nameEn}{config.seo.showAllRightsReserved ? '. All rights reserved' : ''}
+      </div>
+      <div class="text-[9px] text-zinc-400">
+        Font: <a href="https://vercel.com/font" target="_blank" class="hover:text-zinc-800 transition-all duration-300">Geist</a>, <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-zinc-800 transition-all duration-300">IBM Plex Sans JP</a>
       </div>
     </footer>
   {/if}

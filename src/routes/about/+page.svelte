@@ -61,8 +61,11 @@
       in:fade={{ duration: 1000, delay: 600 }}
       class="pb-16 text-center"
     >
-      <div class="text-[9px] uppercase tracking-[0.2em] text-zinc-400">
+      <div class="text-[9px] uppercase tracking-[0.2em] text-zinc-400 mb-2">
         &copy; {new Date().getFullYear()} {profile.nameEn}{seo.showAllRightsReserved ? '. All rights reserved' : ''}
+      </div>
+      <div class="text-[9px] text-zinc-400">
+        Font: <a href="https://vercel.com/font" target="_blank" class="hover:text-zinc-800 transition-all duration-300">Geist</a>, <a href="https://fonts.google.com/specimen/IBM+Plex+Sans+JP" target="_blank" class="hover:text-zinc-800 transition-all duration-300">IBM Plex Sans JP</a>
       </div>
     </footer>
   {/if}
