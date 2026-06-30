@@ -1,6 +1,8 @@
 <script>
   import '@unocss/reset/tailwind.css';
   import 'virtual:uno.css';
+  import '@fontsource/geist/400.css';
+  import '@fontsource/geist/500.css';
   import '@fontsource/ibm-plex-sans-jp/400.css';
   import '@fontsource/ibm-plex-sans-jp/500.css';
   import '../app.css';

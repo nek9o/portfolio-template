@@ -16,8 +16,8 @@ export default defineConfig({
   transformers: [transformerDirectives(), transformerVariantGroup()],
   theme: {
     fontFamily: {
-      sans: '"IBM Plex Sans JP", sans-serif',
-      base: '"IBM Plex Sans JP", sans-serif',
+      sans: '"Geist", "IBM Plex Sans JP", sans-serif',
+      base: '"Geist", "IBM Plex Sans JP", sans-serif',
     },
     colors: {
       bgPrimary: theme.colors.zinc[50], // メイン背景色 (Body背景など)

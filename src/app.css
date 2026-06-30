@@ -1,7 +1,7 @@
 /* Tailwind v4 directives removed */
 
 :root {
-  --font-base: 'IBM Plex Sans JP', sans-serif;
+  --font-base: 'Geist', 'IBM Plex Sans JP', sans-serif;
 
   /* カラーパレット (uno.config.ts の定義を参照) */
   --bg-primary: theme('colors.bgPrimary');

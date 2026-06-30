@@ -157,7 +157,7 @@
 
 <style>
   :global(body) {
-    font-family: "IBM Plex Sans JP", sans-serif;
+    font-family: "Geist", "IBM Plex Sans JP", sans-serif;
     font-weight: 400;
   }
 </style>

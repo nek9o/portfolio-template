@@ -38,6 +38,7 @@
     "wrangler": "^4.75.0"
   },
   "dependencies": {
+    "@fontsource/geist": "^5.2.9",
     "@fontsource/ibm-plex-sans-jp": "^5.2.8",
     "@iarna/toml": "^2.2.5"
   }
